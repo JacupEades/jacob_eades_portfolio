@@ -5,7 +5,7 @@ type Props = {}
 
 export default function Skills({}: Props) {
   return (
-   <section id='skills' className='max-w-screen-xl z-10 py-4 px-8 mt-10'>
+   <section id='skills' className='max-w-screen-xl z-10 mb-4 mx-8 mt-10'>
    <div className='grid grid-cols-2'>
    <div className='w-full flex justify-center m-0'>
    <div className='overflow-hidden rounded-full bg-opacity-100 bg-primaryWeak'>

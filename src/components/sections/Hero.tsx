@@ -9,7 +9,7 @@ type Props = {}
 
 export default function Hero({}: Props) {
   return (
-    <section id='hero' className='max-w-screen-xl pt-[7.5rem] z-10 pb-4 px-8'>
+    <section id='hero' className='max-w-screen-xl pt-[7.5rem] z-10 mb-4 mx-8'>
         <div className={styles.heroBGA}>
         <div className={styles.heroShapes} />
         </div>
@@ -22,8 +22,8 @@ export default function Hero({}: Props) {
           <p className='pb-4'>I&#39;ve also collaborated closely with a <span className='font-bold'>User Experience and Interface</span> designer on all of my projects, ensuring that my code meets both functional and aesthetic requirements.</p>
           <p className='pb-8'>Currently, I&#39;m seeking a <span className='font-bold'>front-end</span> position to utilize my skills and make a difference in the field. Explore my website to see how I can bring value to your team.</p>
           <div className='inline-grid grid-cols-2 gap-4'>
-            <ButtonColor text='Hire Me'/> 
-            <ButtonClear text='View Projects'/>
+            <ButtonColor text='Hire Me' link={'#'}/> 
+            <ButtonClear text='View Projects' link={'#'}/>
           </div>
           
           </div>

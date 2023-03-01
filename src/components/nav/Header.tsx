@@ -40,7 +40,7 @@ function Header({}: Props) {
       className='flex font-pop font-medium text-xl items-center px-8 space-x-12'>
          <a href='#about'>About</a>
          <a href='#major'>Major Projects</a>
-         <a href='#'>Mini Projects</a>
+         <a href='#mini'>Mini Projects</a>
          <a href='#'>Contact</a>
         <StyleSwitch />
       </motion.div>
