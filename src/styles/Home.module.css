@@ -28,26 +28,23 @@
   left: 0px;
   right: 0px;
   top: -100px;
+  transform: skew(0, -3deg);
   z-index: 2;
 
   overflow: hidden;
 }
 
 .heroShapes {
-  position: absolute;
   background-image: url("../../public/Shapes-Large.png");
 
   /* Set a specific height */
-  height: 729.5px;
-  width: 1280px;
+  height: 60rem;
+  width: 60%;
   top: -100px;
-  left: 500px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position-x: 76%;
+  margin: 5rem 60% 0 40%;
+  background-size: 55rem;
   background-repeat: no-repeat;
-  background-size: 38.5%;
+
   z-index: 10;
 }
 

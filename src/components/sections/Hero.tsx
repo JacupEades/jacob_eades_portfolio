@@ -10,8 +10,9 @@ type Props = {}
 export default function Hero({}: Props) {
   return (
     <section id='hero' className='max-w-screen-xl pt-[7.5rem] z-10 pb-4 px-8'>
-            <div className={styles.heroShapes} />
-          <div className={styles.heroBGA} />
+        <div className={styles.heroBGA}>
+        <div className={styles.heroShapes} />
+        </div>
         <div className={styles.heroBGB} />
           <div className='grid grid-cols-2'>
           <div className='z-10'>
