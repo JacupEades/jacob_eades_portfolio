@@ -54,6 +54,7 @@ export default function Hero({}: Props) {
             <Image
               className="m-auto"
               src="/Cutout_JacobEades.png"
+              style={{ width: "auto", height: "auto" }}
               alt="Jacob Eades Cutout"
               width={432}
               height={568}

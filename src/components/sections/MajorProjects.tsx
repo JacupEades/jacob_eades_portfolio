@@ -82,7 +82,6 @@ export default function MajorProjects({}: Props) {
             <Image
               src="/EE_Screen.png"
               alt="Eades Electric Screenshot"
-              style={{ height: "300px" }}
               width={800}
               height={300}
             />

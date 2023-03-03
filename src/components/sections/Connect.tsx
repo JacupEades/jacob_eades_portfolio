@@ -1,10 +1,23 @@
 import React from "react";
 import Image from "next/image";
-import styles from "@/styles/Home.module.css";
 
-type Props = {};
+type Props = { field: Array<string> };
 
-function Connect({}: Props) {
+function Connect({ field }: Props) {
+  async function handleOnSubmit(e: any) {
+    e.preventDefault();
+    const formData = {};
+    Array.from(e.currentTarget.elements).forEach((field) => {
+      if (!field.name) return;
+      formData[field.name] = field.value;
+    });
+    fetch("/api/mail", {
+      method: "post",
+      body: JSON.stringify(formData),
+    });
+    console.log(formData);
+  }
+
   return (
     <section
       id="connect"
@@ -28,6 +41,7 @@ function Connect({}: Props) {
               <Image
                 src="/Github.svg"
                 alt={"Github icon"}
+                style={{ width: "32px", height: "32px" }}
                 height={32}
                 width={32}
               />
@@ -49,6 +63,7 @@ function Connect({}: Props) {
               <Image
                 src="/Linkedin.svg"
                 alt={"Linkedin icon"}
+                style={{ width: "32px", height: "32px" }}
                 height={32}
                 width={32}
               />
@@ -70,6 +85,7 @@ function Connect({}: Props) {
               <Image
                 src="/Mail.svg"
                 alt={"Github icon"}
+                style={{ width: "32px", height: "32px" }}
                 height={32}
                 width={32}
               />
@@ -91,6 +107,7 @@ function Connect({}: Props) {
               <Image
                 src="/Resume.svg"
                 alt={"Document icon"}
+                style={{ width: "32px", height: "32px" }}
                 height={32}
                 width={32}
               />
@@ -104,6 +121,26 @@ function Connect({}: Props) {
               View Resume
             </a>
           </div>
+        </div>
+        {/* Form section */}
+        <div>
+          <form method="post" onSubmit={handleOnSubmit}>
+            <p>
+              <label htmlFor="email">Email</label>
+              <input type="text" name="email" />
+            </p>
+            <p>
+              <label htmlFor="subject">Subject</label>
+              <input type="text" name="subject" />
+            </p>
+            <p>
+              <label htmlFor="message">Message</label>
+              <textarea name="message" />
+            </p>
+            <p></p>
+              <button>Submit</button>
+            </p>
+          </form>
         </div>
       </div>
     </section>

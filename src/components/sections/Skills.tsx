@@ -11,7 +11,8 @@ export default function Skills({}: Props) {
           <div className="overflow-hidden rounded-full bg-opacity-100 bg-primaryWeak">
             <Image
               src="/Skills.png"
-              alt="Jacob Eades Cutout"
+              style={{ width: "auto", height: "auto" }}
+              alt="Skill icons grouped"
               width={432}
               height={568}
             />

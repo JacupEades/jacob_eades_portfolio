@@ -20,7 +20,13 @@ function MiniCard({ title, text1, text2, image, link, target }: Props) {
             {image ? (
               <Image src={image} alt="image" width={120} height={120} />
             ) : (
-              <Image src="/Github.svg" alt="image" width={120} height={120} />
+              <Image
+                src="/Github.svg"
+                alt="image"
+                style={{ width: "32px", height: "32px" }}
+                width={120}
+                height={120}
+              />
             )}
           </div>
           <div className="p-6 w-[30rem]">

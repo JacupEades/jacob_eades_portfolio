@@ -38,7 +38,17 @@ function ButtonClear({ text, icon, link, target }: Props) {
         className="bg-opacity-100 gap-2 bg-neutralGlass"
         variant="contained"
       >
-        {icon ? <Image src={icon} alt="icon" width={24} height={24} /> : ""}
+        {icon ? (
+          <Image
+            src={icon}
+            alt="icon"
+            style={{ width: "24", height: "24" }}
+            width={24}
+            height={24}
+          />
+        ) : (
+          ""
+        )}
         <a href={link} target={target}>
           {text}
         </a>
