@@ -3,7 +3,13 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 import { Button } from "@mui/material";
 
-type Props = { text: string; icon?: string; link: string; target?: string };
+type Props = {
+  text: string;
+  icon?: string;
+  link: string;
+  target?: string;
+  buttonType?: string;
+};
 
 const Clear = styled(Button)({
   boxShadow: "none",
@@ -31,12 +37,13 @@ const Clear = styled(Button)({
   },
 });
 
-function ButtonClear({ text, icon, link, target }: Props) {
+function ButtonClear({ text, icon, link, target, buttonType }: Props) {
   return (
     <>
       <Clear
         className="bg-opacity-100 gap-2 bg-neutralGlass"
         variant="contained"
+        type={buttonType}
       >
         {icon ? (
           <Image

@@ -1,5 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import {
+  Box,
+  InputLabel,
+  OutlinedInput,
+  TextareaAutosize,
+} from "@mui/material";
+import ButtonClear from "../buttons/ButtonClear";
 
 type Props = { field: Array<string> };
 
@@ -123,25 +130,49 @@ function Connect({ field }: Props) {
           </div>
         </div>
         {/* Form section */}
-        <div>
-          <form method="post" onSubmit={handleOnSubmit}>
-            <p>
-              <label htmlFor="email">Email</label>
-              <input type="text" name="email" />
-            </p>
-            <p>
-              <label htmlFor="subject">Subject</label>
-              <input type="text" name="subject" />
-            </p>
-            <p>
-              <label htmlFor="message">Message</label>
-              <textarea name="message" />
-            </p>
-            <p>
-              <button>Submit</button>
-            </p>
-          </form>
-        </div>
+        <Box
+          component="form"
+          method="post"
+          onSubmit={handleOnSubmit}
+          className="flex flex-col self-center max-w-full gap-6"
+        >
+          <div>
+            <InputLabel required>Your Email</InputLabel>
+            <OutlinedInput
+              required
+              id="outlined-basic"
+              type="text"
+              name="email"
+              className="w-full"
+            />
+          </div>
+          <div>
+            <InputLabel required>Subject</InputLabel>
+            <OutlinedInput
+              required
+              id="outlined-basic"
+              type="text"
+              name="subject"
+              className="w-full"
+            />
+          </div>
+          <div>
+            <InputLabel required>Message</InputLabel>
+            <OutlinedInput
+              required
+              id="outlined-basic"
+              name="message"
+              className="w-full rounded-lg"
+            />
+          </div>
+          <div className="max-w-max">
+            <ButtonClear
+              buttonType={"submit"}
+              text={"Send Message"}
+              link={""}
+            />
+          </div>
+        </Box>
       </div>
     </section>
   );
