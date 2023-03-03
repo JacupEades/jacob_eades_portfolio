@@ -137,7 +137,7 @@ function Connect({ field }: Props) {
               <label htmlFor="message">Message</label>
               <textarea name="message" />
             </p>
-            <p></p>
+            <p>
               <button>Submit</button>
             </p>
           </form>
