@@ -32,6 +32,14 @@ module.exports = {
       darkPageBG: "var(--gradient-page-bg-dark)",
       darkHeroBG: "var(--gradient-hero-bg-dark)",
     },
+    screens: {
+      tablet: "600px",
+
+      laptop: "900px",
+
+      desktop: "1440px",
+      // => @media (min-width: 1440px) { ... }
+    },
   },
   plugins: [],
 };

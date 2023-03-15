@@ -4,14 +4,17 @@ import styles from "@/styles/Home.module.css";
 import ButtonClear from "../buttons/ButtonClear";
 import ButtonColor from "../buttons/ButtonColor";
 import CardTag from "../CardTag";
+import { useMediaQuery } from "react-responsive";
 
 type Props = {};
 
 export default function MajorProjects({}: Props) {
+  const smallButton = useMediaQuery({ query: "(min-width: 1260px)" });
+
   return (
     <section id="major" className="max-w-screen-xl z-10 pt-[5.5rem] mb-4 mx-8">
       <p className="text-4xl font-bold pb-10">Major Projects</p>
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 laptop:grid-cols-2 gap-10">
         {/* Eades Antiques */}
         <div className={styles.cardLargeBorder}>
           <div className={styles.cardLarge}>
@@ -55,23 +58,45 @@ export default function MajorProjects({}: Props) {
               </div>
               {/* Buttons div */}
               <div className="flex absolute bottom-6 gap-2 pt-6">
-                <ButtonColor
-                  text="View Live"
-                  link="http://67.207.92.238/"
-                  target="_blank"
-                />
-                <ButtonClear
-                  text="View Frontend"
-                  icon="/Github.svg"
-                  link="https://github.com/JacupEades/eades-ecom-frontend"
-                  target="_blank"
-                />
-                <ButtonClear
-                  text="View Backend"
-                  icon="/Github.svg"
-                  link="https://github.com/JacupEades/eades-ecom-backend"
-                  target="_blank"
-                />
+                {smallButton ? (
+                  <>
+                    <ButtonColor
+                      text="View Live"
+                      link="http://67.207.92.238/"
+                      target="_blank"
+                    />
+                    <ButtonClear
+                      text="View Frontend"
+                      icon="/Github.svg"
+                      link="https://github.com/JacupEades/eades-ecom-frontend"
+                      target="_blank"
+                    />
+                    <ButtonClear
+                      text="View Backend"
+                      icon="/Github.svg"
+                      link="https://github.com/JacupEades/eades-ecom-backend"
+                      target="_blank"
+                    />
+                  </>
+                ) : (
+                  <>
+                    <ButtonColor
+                      text="Live"
+                      link="http://67.207.92.238/"
+                      target="_blank"
+                    />
+                    <ButtonClear
+                      text="Frontend"
+                      link="https://github.com/JacupEades/eades-ecom-frontend"
+                      target="_blank"
+                    />
+                    <ButtonClear
+                      text="Backend"
+                      link="https://github.com/JacupEades/eades-ecom-backend"
+                      target="_blank"
+                    />
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -104,7 +129,7 @@ export default function MajorProjects({}: Props) {
                 results.
               </p>
               {/* Tags div */}
-              <div className="pt-4 flex flex-wrap gap-2">
+              <div className="pt-4 pb-16 flex flex-wrap gap-2">
                 <CardTag text="Website" color="var(--tags-primary)" />
                 <CardTag text="HTML" color="var(--tags-secondary)" />
                 <CardTag text="CSS" color="var(--tags-secondary)" />

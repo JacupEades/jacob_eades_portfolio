@@ -34,6 +34,18 @@
   overflow: hidden;
 }
 
+@media (max-width: 1440px) {
+  .heroBGA {
+    height: 745px;
+  }
+}
+
+@media (max-width: 899px) {
+  .heroBGA {
+    height: 725px;
+  }
+}
+
 .heroShapesLight {
   background-image: url("../../public/Shapes-Large.png");
 
@@ -78,6 +90,7 @@
 /* Card-Large */
 .cardLargeBorder {
   max-width: 620px;
+  min-height: fit-content;
   border: 8px solid #f9f8ff;
   backdrop-filter: blur(15px);
 
@@ -118,9 +131,16 @@
   /* border-image: linear-gradient(101.54deg, #F9F8FF -3.05%, rgba(255, 255, 255, 0.1) 112.2%);
   border-image-slice: 1; */
 }
+
+@media (max-width: 1200px) {
+  .cardMiniBorder {
+    height: fit-content;
+  }
+}
+
 .cardMini {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 7.5rem auto;
   align-items: center;
   width: 100%;
 
@@ -186,6 +206,10 @@
   left: 30%;
   background: var(--ball-3);
   animation: rotateAnimation 36s ease-in-out infinite alternate;
+}
+
+.burgerInvert {
+  filter: invert(100%);
 }
 
 /* Default Next Styles */

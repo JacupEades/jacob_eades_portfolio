@@ -25,7 +25,7 @@ function Connect() {
     >
       <h1 className="text-4xl font-bold pb-6">Let&#39;s Connect</h1>
       {/* container */}
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 laptop:grid-cols-2 gap-10">
         <div className="w-[38.75rem]">
           <h2 className="pb-6">
             Get in touch with me by submitting the form or using any of the
@@ -159,11 +159,7 @@ function Connect() {
             />
           </div>
           <div className="max-w-max">
-            <ButtonClear
-              buttonType={"submit"}
-              text={"Send Message"}
-              link={""}
-            />
+            <ButtonClear text={"Send Message"} link={""} />
           </div>
         </Box>
       </div>

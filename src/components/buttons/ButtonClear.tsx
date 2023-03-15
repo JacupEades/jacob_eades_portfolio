@@ -8,7 +8,6 @@ type Props = {
   icon?: string;
   link: string;
   target?: string;
-  buttonType?: string;
 };
 
 const Clear = styled(Button)({
@@ -37,13 +36,12 @@ const Clear = styled(Button)({
   },
 });
 
-function ButtonClear({ text, icon, link, target, buttonType }: Props) {
+function ButtonClear({ text, icon, link, target }: Props) {
   return (
     <>
       <Clear
         className="bg-opacity-100 gap-2 bg-buttonGlass"
         variant="contained"
-        type={buttonType}
       >
         {icon ? (
           <Image

@@ -7,7 +7,7 @@ export default function MajorProjects({}: Props) {
   return (
     <section id="mini" className="max-w-screen-xl z-10 pt-[5.5rem] mb-4 mx-8">
       <h1 className="text-4xl font-bold pb-10">Mini Projects</h1>
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 laptop:grid-cols-2 gap-3 laptop:gap-10">
         <MiniCard
           title={"Title for Pro"}
           text1={
@@ -15,7 +15,6 @@ export default function MajorProjects({}: Props) {
           }
           text2={"High score: xxx"}
           image={"/Donut.svg"}
-          link={"#"}
         />
         <MiniCard
           title={"Title for Pro"}
@@ -24,7 +23,6 @@ export default function MajorProjects({}: Props) {
           }
           text2={"High score: xxx"}
           image={"/Donut.svg"}
-          link={"#"}
         />
         <MiniCard
           title={"Title for Pro"}
@@ -33,7 +31,6 @@ export default function MajorProjects({}: Props) {
           }
           text2={"High score: xxx"}
           image={"/Donut.svg"}
-          link={"#"}
         />
         <MiniCard
           title={"Title for Pro"}
@@ -42,7 +39,6 @@ export default function MajorProjects({}: Props) {
           }
           text2={"High score: xxx"}
           image={"/Donut.svg"}
-          link={"#"}
         />
       </div>
     </section>
