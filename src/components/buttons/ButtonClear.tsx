@@ -41,7 +41,7 @@ function ButtonClear({ text, icon, link, target, buttonType }: Props) {
   return (
     <>
       <Clear
-        className="bg-opacity-100 gap-2 bg-neutralGlass"
+        className="bg-opacity-100 gap-2 bg-buttonGlass"
         variant="contained"
         type={buttonType}
       >

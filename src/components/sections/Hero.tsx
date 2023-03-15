@@ -4,14 +4,23 @@ import styles from "@/styles/Home.module.css";
 import { motion } from "framer-motion";
 import ButtonClear from "../buttons/ButtonClear";
 import ButtonColor from "../buttons/ButtonColor";
+import { useTheme } from "@mui/material/styles";
 
 type Props = {};
 
 export default function Hero({}: Props) {
+  const theme = useTheme();
+
   return (
     <section id="hero" className="max-w-screen-xl pt-[7.5rem] z-10 mb-4 mx-8">
       <div className={styles.heroBGA}>
-        <div className={styles.heroShapes} />
+        <div
+          className={
+            theme.palette.mode === "light"
+              ? styles.heroShapesLight
+              : styles.heroShapesDark
+          }
+        />
       </div>
       <div className={styles.heroBGB} />
       <div className="grid grid-cols-2">
@@ -52,9 +61,8 @@ export default function Hero({}: Props) {
             className="h-[29.75rem] w-[29.75rem] overflow-hidden rounded-full bg-opacity-100 bg-primaryWeak backdrop-blur"
           >
             <Image
-              className="m-auto"
+              className="m-auto h-auto"
               src="/Cutout_JacobEades.png"
-              style={{ width: "auto", height: "auto" }}
               alt="Jacob Eades Cutout"
               width={432}
               height={568}
@@ -64,4 +72,7 @@ export default function Hero({}: Props) {
       </div>
     </section>
   );
+}
+function componentDidMount(arg0: HTMLElement | null) {
+  throw new Error("Function not implemented.");
 }

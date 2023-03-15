@@ -11,14 +11,14 @@ export default function MajorProjects({}: Props) {
   return (
     <section id="major" className="max-w-screen-xl z-10 pt-[5.5rem] mb-4 mx-8">
       <p className="text-4xl font-bold pb-10">Major Projects</p>
-      <div className="grid grid-flow-col gap-10">
+      <div className="grid grid-cols-2 gap-10">
         {/* Eades Antiques */}
         <div className={styles.cardLargeBorder}>
           <div className={styles.cardLarge}>
             <Image
               src="/Shop_EA.png"
               alt="Eades Antiques Screenshot"
-              style={{ height: "300px" }}
+              style={{ aspectRatio: 2 / 1 }}
               width={800}
               height={300}
             />
@@ -82,6 +82,7 @@ export default function MajorProjects({}: Props) {
             <Image
               src="/EE_Screen.png"
               alt="Eades Electric Screenshot"
+              style={{ aspectRatio: 2 / 1 }}
               width={800}
               height={300}
             />

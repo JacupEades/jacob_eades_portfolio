@@ -1,16 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import {
-  Box,
-  InputLabel,
-  OutlinedInput,
-  TextareaAutosize,
-} from "@mui/material";
+import { Box, Input, InputLabel, OutlinedInput } from "@mui/material";
 import ButtonClear from "../buttons/ButtonClear";
 
-type Props = { field: Array<string> };
-
-function Connect({ field }: Props) {
+function Connect() {
   async function handleOnSubmit(e: any) {
     e.preventDefault();
     const formData = {};
@@ -40,7 +33,7 @@ function Connect({ field }: Props) {
           </h2>
           <div className="flex items-center gap-6 pb-6">
             <a
-              className="flex items-center justify-center rounded-full h-16 w-16  bg-neutralGlass bg-opacity-100 border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
+              className="flex items-center justify-center rounded-full h-16 w-16  bg-buttonGlass bg-opacity-100 border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
               href="https://github.com/JacupEades"
               target="_blank"
               rel="noreferrer"
@@ -62,7 +55,7 @@ function Connect({ field }: Props) {
           </div>
           <div className="flex items-center gap-6 pb-6">
             <a
-              className="flex items-center justify-center rounded-full h-16 w-16  bg-neutralGlass bg-opacity-100 border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
+              className="flex items-center justify-center rounded-full h-16 w-16  bg-buttonGlass bg-opacity-100 border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
               href="https://www.linkedin.com/in/jacob-eades/"
               target="_blank"
               rel="noreferrer"
@@ -86,7 +79,7 @@ function Connect({ field }: Props) {
           </div>
           <div className="flex items-center gap-6 pb-6">
             <a
-              className="flex items-center justify-center rounded-full h-16 w-16  bg-neutralGlass bg-opacity-100 border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
+              className="flex items-center justify-center rounded-full h-16 w-16  bg-buttonGlass bg-opacity-100 border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
               href="mailto:jwae98@gmail.com"
             >
               <Image
@@ -106,7 +99,7 @@ function Connect({ field }: Props) {
           </div>
           <div className="flex items-center gap-6 pb-6">
             <a
-              className="flex items-center justify-center rounded-full h-16 w-16  bg-neutralGlass bg-opacity-100 border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
+              className="flex items-center justify-center rounded-full h-16 w-16  bg-buttonGlass bg-opacity-100 border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
               href="/Resume.pdf"
               target="_blank"
               rel="noreferrer"

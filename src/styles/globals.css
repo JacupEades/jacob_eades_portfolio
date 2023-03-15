@@ -1,24 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-   --primary-weak: #e6e0ff4d;
-   --primary-medium: #614AD3;
-   --primary-strong: #533acf;
-   --neutral-white: #FFFFFF;
-   --neutral-header: rgba(255, 255, 255, 0.9);
-   --neutral-glass: rgba(255, 255, 255, 0.25);
-   --neutral-glass-hover: rgba(255, 255, 255, 0.85);
-   --neutral-strong:  #393939;
-   --border-weak: #f9f8ff88;
-   --tags-primary: #D6CFF4;
-   --tags-secondary: #B2E4F0;
-   --gradient-logo: linear-gradient(255.63deg, rgba(17, 3, 71, 0.8) 17.71%, rgba(8, 71, 74, 0.8) 112.64%);
-   --gradient-page-bg: linear-gradient(255.63deg, rgba(209, 201, 241, 0.8) 17.71%, rgba(185, 251, 255, 0.1) 112.64%);
-   --gradient-hero-bg: linear-gradient(256.12deg, #CDD7FE 17.84%, #C5F9FC 113.46%);
- }
- 
- /* [data-theme="dark"] {
- } */
+  --primary-weak: #e6e0ff4d;
+  --primary-medium: #614ad3;
+  --primary-strong: #533acf;
+  --neutral-white: #ffffff;
+  --neutral-header: rgba(255, 255, 255, 0.9);
+  --neutral-glass: rgba(255, 255, 255, 0.25);
+  --button-glass: rgba(255, 255, 255, 0.25);
+  --neutral-glass-hover: rgba(255, 255, 255, 0.85);
+  --neutral-strong: #393939;
+  --border-weak: #f9f8ff88;
+  --tags-primary: #d6cff4;
+  --tags-secondary: #b2e4f0;
+  --gradient-logo: linear-gradient(
+    255.63deg,
+    rgba(17, 3, 71, 0.8) 17.71%,
+    rgba(8, 71, 74, 0.8) 112.64%
+  );
+  --gradient-page-bg: linear-gradient(
+    255.63deg,
+    rgba(209, 201, 241, 0.8) 17.71%,
+    rgba(185, 251, 255, 0.1) 112.64%
+  );
+  --gradient-hero-bg: linear-gradient(
+    256.12deg,
+    #cdd7fe 17.84%,
+    #c5f9fc 113.46%
+  );
+  --card-large-glass: linear-gradient(
+      101.54deg,
+      rgba(249, 248, 255, 0.3) -3.05%,
+      rgba(255, 255, 255, 0.1) 112.2%
+    ),
+    linear-gradient(
+      101.54deg,
+      rgba(249, 248, 255, 0.5) -3.05%,
+      rgba(255, 255, 255, 0.1) 112.2%
+    );
+  --card-mini-glass: linear-gradient(
+      101.54deg,
+      rgba(249, 248, 255, 0.3) -3.05%,
+      rgba(255, 255, 255, 0.1) 112.2%
+    ),
+    linear-gradient(
+      111.68deg,
+      rgba(230, 224, 255, 0.15) 7.59%,
+      rgba(230, 224, 255, 0.3) 102.04%
+    );
+  --ball-1: linear-gradient(rgba(230, 202, 252, 0.9) 6.8%, #9ad1ef 95.44%);
+  --ball-2: linear-gradient(#c0f7cf -5.84%, #92bdfd 107.88%);
+  --ball-3: linear-gradient(#b6bdef -3.06%, #bae8f1 104.45%);
+}
+
+[data-theme="dark"] {
+  --primary-weak: #e6e0ff4d;
+  --primary-medium: #8367ff;
+  --primary-strong: #533acf;
+  --neutral-white: #ffffff;
+  --neutral-header: rgba(20, 17, 29, 0.8);
+  --neutral-glass: linear-gradient(
+    rgba(82, 68, 138, 0.15) 7.59%,
+    rgba(14, 0, 64, 0.25) 102.04%
+  );
+  --button-glass: rgba(82, 68, 138, 0.25);
+  --neutral-glass-hover: rgba(255, 255, 255, 0.5);
+  --neutral-strong: #ffffff;
+  --border-weak: #140e2e26;
+  --tags-primary: #6151a5;
+  --tags-secondary: #1c788e;
+  --gradient-logo: linear-gradient(256.12deg, #cdd7fe 17.84%, #c5f9fc 113.46%);
+  --gradient-page-bg: linear-gradient(
+    255.63deg,
+    rgba(24, 15, 58, 0.8) 17.71%,
+    rgba(2, 61, 65, 0.8) 112.64%
+  );
+  --gradient-hero-bg: linear-gradient(
+    255.63deg,
+    #261b52 17.71%,
+    #095f64 112.64%
+  );
+  --card-large-glass: linear-gradient(
+      101.54deg,
+      rgba(82, 68, 138, 0.3) 7.59%,
+      rgba(14, 0, 64, 0.25) 102.04%
+    ),
+    linear-gradient(
+      101.54deg,
+      rgba(82, 68, 138, 0.5) 7.59%,
+      rgba(14, 0, 64, 0.25) 102.04%
+    );
+  --card-mini-glass: linear-gradient(
+      101.54deg,
+      rgba(82, 68, 138, 0.3) 7.59%,
+      rgba(14, 0, 64, 0.25) 102.04%
+    ),
+    linear-gradient(
+      101.54deg,
+      rgba(82, 68, 138, 0.5) 7.59%,
+      rgba(14, 0, 64, 0.25) 102.04%
+    );
+  --ball-1: linear-gradient(
+    rgba(53, 13, 84, 0.8) 6.8%,
+    rgba(16, 74, 107, 0.9) 95.44%
+  );
+  --ball-2: linear-gradient(
+    rgba(0, 104, 29, 0.9) -5.84%,
+    rgba(0, 77, 192, 0.8) 107.88%
+  );
+  --ball-3: linear-gradient(
+    rgba(0, 14, 111, 0.9) -3.06%,
+    #00768e 104.44%,
+    rgba(24, 115, 133, 0.8) 104.45%
+  );
+}

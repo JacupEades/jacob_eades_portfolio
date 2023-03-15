@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useEffect } from "react";
-import StyleSwitch from "../switch/StyleSwitch";
+import ThemeUpdater from "../ThemeUpdater";
 
 type Props = {};
 
@@ -43,7 +43,7 @@ function Header({}: Props) {
             <a href="#major">Major Projects</a>
             <a href="#mini">Mini Projects</a>
             <a href="#connect">Contact</a>
-            <StyleSwitch />
+            <ThemeUpdater />
           </motion.div>
         </header>
       </div>
@@ -52,7 +52,3 @@ function Header({}: Props) {
 }
 
 export default Header;
-
-function componentDidMount(window: Window & typeof globalThis) {
-  throw new Error("Function not implemented.");
-}

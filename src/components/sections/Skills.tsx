@@ -1,20 +1,27 @@
 import React from "react";
 import Image from "next/image";
+import { useTheme } from "@mui/material/styles";
 
 type Props = {};
 
 export default function Skills({}: Props) {
+  const theme = useTheme();
+
   return (
     <section id="skills" className="max-w-screen-xl z-10 mb-4 mx-8 mt-10">
       <div className="grid grid-cols-2">
         <div className="w-full flex justify-center m-0">
           <div className="overflow-hidden rounded-full bg-opacity-100 bg-primaryWeak">
             <Image
-              src="/Skills.png"
-              style={{ width: "auto", height: "auto" }}
+              className="m-auto -auto"
+              src={
+                theme.palette.mode === "light"
+                  ? "/Skills.png"
+                  : "/Skills_Dark.png"
+              }
               alt="Skill icons grouped"
               width={432}
-              height={568}
+              height={432}
             />
           </div>
         </div>
