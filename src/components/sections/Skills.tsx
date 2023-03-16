@@ -20,6 +20,7 @@ export default function Skills({}: Props) {
                   : "/Skills_Dark.png"
               }
               alt="Skill icons grouped"
+              priority
               width={432}
               height={432}
             />

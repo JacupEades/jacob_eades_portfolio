@@ -58,27 +58,21 @@ export default function Hero({}: Props) {
             <ButtonClear text="View Projects" link={"#"} />
           </div>
         </div>
-        {contentSmall ? (
-          <>
-            <div className="z-10 m-auto content-none laptop:block laptop:h-[398px] laptop:w-[398px] desktop:h-[476px] desktop:w-[476px]">
-              <div className=" flex overflow-hidden rounded-full bg-opacity-100 bg-primaryWeak backdrop-blur h-full w-full">
-                <Image
-                  className="m-auto"
-                  src={"/Cutout_JacobEades.png"}
-                  alt={"Jacob Eades Cutout"}
-                  height={568}
-                  width={432}
-                />
-              </div>
-            </div>
-          </>
-        ) : (
-          ""
-        )}
+        <div className="z-10 m-auto hidden laptop:block laptop:h-[398px] laptop:w-[398px] desktop:h-[476px] desktop:w-[476px]">
+          <div className=" flex overflow-hidden rounded-full bg-opacity-100 bg-primaryWeak backdrop-blur h-full w-full">
+            <Image
+              className="m-auto"
+              src={"/Cutout_JacobEades.png"}
+              alt={"Jacob Eades Cutout"}
+              height={568}
+              width={432}
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
 }
-function componentDidMount(arg0: HTMLElement | null) {
-  throw new Error("Function not implemented.");
-}
+// function componentDidMount(arg0: HTMLElement | null) {
+//   throw new Error("Function not implemented.");
+// }

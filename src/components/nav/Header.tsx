@@ -92,95 +92,92 @@ function Header({}: Props) {
             <a href="#hero">JE</a>
           </motion.div>
           {/* Header Navigation */}
-          {nineToFourteen ? (
-            <motion.div
-              initial={{ x: 200, opacity: 0, scale: 0.5 }}
-              animate={{ x: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 1.25 }}
-              className="flex font-pop font-medium text-xl items-center px-8 space-x-12"
-            >
-              <a href="#about">About</a>
-              <a href="#major">Major Projects</a>
-              <a href="#mini">Mini Projects</a>
-              <a href="#connect">Contact</a>
-              <ThemeUpdater />
-            </motion.div>
-          ) : (
-            <motion.div
-              initial={{ x: 200, opacity: 0, scale: 0.5 }}
-              animate={{ x: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 1.25 }}
-              className="flex items-center px-8 space-x-6"
-            >
-              <ThemeUpdater />
-              <div>
-                <Button
-                  ref={anchorRef}
-                  className="p-0"
-                  id="burger-button"
-                  aria-controls={open ? "burger-menu" : undefined}
-                  aria-expanded={open ? "true" : undefined}
-                  aria-haspopup="true"
-                  onClick={handleToggle}
-                >
-                  <Image
-                    src="/burger_menu.svg"
-                    alt="icon"
-                    className={
-                      theme.palette.mode === "light" ? "" : styles.burgerInvert
-                    }
-                    style={{ width: "32", height: "32" }}
-                    width={32}
-                    height={32}
-                  />
-                </Button>
-                <Popper
-                  open={open}
-                  anchorEl={anchorRef.current}
-                  role={undefined}
-                  placement="bottom-start"
-                  transition
-                  disablePortal
-                >
-                  {({ TransitionProps, placement }) => (
-                    <Grow
-                      {...TransitionProps}
-                      style={{
-                        transformOrigin:
-                          placement === "bottom-start"
-                            ? "left top"
-                            : "left bottom",
-                      }}
-                    >
-                      <Paper>
-                        <ClickAwayListener onClickAway={handleClose}>
-                          <MenuList
-                            autoFocusItem={open}
-                            id="burger-menu"
-                            aria-labelledby="burger-button"
-                            onKeyDown={handleListKeyDown}
-                          >
-                            <MenuItem onClick={handleClose}>
-                              <a href="#about">About</a>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                              <a href="#major">Major Projects</a>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                              <a href="#mini">Mini Projects</a>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                              <a href="#connect">Contact</a>
-                            </MenuItem>
-                          </MenuList>
-                        </ClickAwayListener>
-                      </Paper>
-                    </Grow>
-                  )}
-                </Popper>
-              </div>
-            </motion.div>
-          )}
+          <motion.div
+            initial={{ x: 200, opacity: 0, scale: 0.5 }}
+            animate={{ x: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 1.25 }}
+            className="hidden laptop:flex font-pop font-medium text-xl items-center px-8 space-x-12"
+          >
+            <a href="#about">About</a>
+            <a href="#major">Major Projects</a>
+            <a href="#mini">Mini Projects</a>
+            <a href="#connect">Contact</a>
+            <ThemeUpdater />
+          </motion.div>
+          <motion.div
+            initial={{ x: 200, opacity: 0, scale: 0.5 }}
+            animate={{ x: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 1.25 }}
+            className="flex laptop:hidden items-center px-8 space-x-6"
+          >
+            <ThemeUpdater />
+            <div>
+              <Button
+                ref={anchorRef}
+                className="p-0"
+                id="burger-button"
+                aria-controls={open ? "burger-menu" : undefined}
+                aria-expanded={open ? "true" : undefined}
+                aria-haspopup="true"
+                onClick={handleToggle}
+              >
+                <Image
+                  src="/burger_menu.svg"
+                  alt="icon"
+                  className={
+                    theme.palette.mode === "light" ? "" : styles.burgerInvert
+                  }
+                  style={{ width: "32", height: "32" }}
+                  width={32}
+                  height={32}
+                />
+              </Button>
+              <Popper
+                open={open}
+                anchorEl={anchorRef.current}
+                role={undefined}
+                placement="bottom-start"
+                transition
+                disablePortal
+              >
+                {({ TransitionProps, placement }) => (
+                  <Grow
+                    {...TransitionProps}
+                    style={{
+                      transformOrigin:
+                        placement === "bottom-start"
+                          ? "left top"
+                          : "left bottom",
+                    }}
+                  >
+                    <Paper>
+                      <ClickAwayListener onClickAway={handleClose}>
+                        <MenuList
+                          autoFocusItem={open}
+                          id="burger-menu"
+                          aria-labelledby="burger-button"
+                          onKeyDown={handleListKeyDown}
+                        >
+                          <MenuItem onClick={handleClose}>
+                            <a href="#about">About</a>
+                          </MenuItem>
+                          <MenuItem onClick={handleClose}>
+                            <a href="#major">Major Projects</a>
+                          </MenuItem>
+                          <MenuItem onClick={handleClose}>
+                            <a href="#mini">Mini Projects</a>
+                          </MenuItem>
+                          <MenuItem onClick={handleClose}>
+                            <a href="#connect">Contact</a>
+                          </MenuItem>
+                        </MenuList>
+                      </ClickAwayListener>
+                    </Paper>
+                  </Grow>
+                )}
+              </Popper>
+            </div>
+          </motion.div>
         </header>
       </div>
     </>
