@@ -2,6 +2,8 @@ import React from "react";
 import styled from "@emotion/styled";
 import Image from "next/image";
 import { Button } from "@mui/material";
+import { useTheme } from "next-themes";
+import styles from "@/styles/Home.module.css";
 
 type Props = {
   text: string;
@@ -37,29 +39,47 @@ const Clear = styled(Button)({
 });
 
 function ButtonClear({ text, icon, link, target }: Props) {
-  return (
-    <>
-      <Clear
-        className="bg-opacity-100 gap-2 bg-buttonGlass"
-        variant="contained"
-      >
-        {icon ? (
-          <Image
-            src={icon}
-            alt="icon"
-            style={{ width: "24", height: "24" }}
-            width={24}
-            height={24}
-          />
-        ) : (
-          ""
-        )}
-        <a href={link} target={target}>
-          {text}
-        </a>
-      </Clear>
-    </>
-  );
+  const { theme } = useTheme();
+  if (theme == "light") {
+    return (
+      <>
+        <Clear
+          className="bg-opacity-100 gap-2 bg-buttonGlass"
+          variant="contained"
+        >
+          {icon ? <Image src={icon} alt="icon" width={24} height={24} /> : ""}
+          <a href={link} target={target}>
+            {text}
+          </a>
+        </Clear>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Clear
+          className="bg-opacity-100 gap-2 bg-buttonGlass"
+          variant="contained"
+        >
+          {icon ? (
+            <Image
+              src={icon}
+              alt="icon"
+              className={styles.svgsInvert}
+              style={{ width: "auto", height: "auto", filter: "100%" }}
+              width={24}
+              height={24}
+            />
+          ) : (
+            ""
+          )}
+          <a href={link} target={target} style={{ color: "#fff" }}>
+            {text}
+          </a>
+        </Clear>
+      </>
+    );
+  }
 }
 
 export default ButtonClear;

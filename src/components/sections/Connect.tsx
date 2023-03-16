@@ -1,21 +1,25 @@
 import React from "react";
 import Image from "next/image";
-import { Box, Input, InputLabel, OutlinedInput } from "@mui/material";
+import { Box, InputLabel, OutlinedInput } from "@mui/material";
 import ButtonClear from "../buttons/ButtonClear";
+import { useTheme } from "next-themes";
+import styles from "@/styles/Home.module.css";
 
 function Connect() {
+  const { theme } = useTheme();
+
   async function handleOnSubmit(e: any) {
-    e.preventDefault();
-    const formData = {};
-    Array.from(e.currentTarget.elements).forEach((field) => {
-      if (!field.name) return;
-      formData[field.name] = field.value;
-    });
-    fetch("/api/mail", {
-      method: "post",
-      body: JSON.stringify(formData),
-    });
-    console.log(formData);
+    // e.preventDefault();
+    // const formData = {};
+    // Array.from(e.currentTarget.elements).forEach((field) => {
+    //   if (!field.name) return;
+    //   formData[field.name] = field.value;
+    // });
+    // fetch("/api/mail", {
+    //   method: "post",
+    //   body: JSON.stringify(formData),
+    // });
+    // console.log(formData);
   }
 
   return (
@@ -41,6 +45,7 @@ function Connect() {
               <Image
                 src="/Github.svg"
                 alt={"Github icon"}
+                className={theme === "dark" ? styles.svgsInvert : ""}
                 style={{ width: "32px", height: "32px" }}
                 height={32}
                 width={32}
@@ -63,6 +68,7 @@ function Connect() {
               <Image
                 src="/Linkedin.svg"
                 alt={"Linkedin icon"}
+                className={theme === "dark" ? styles.svgsInvert : ""}
                 style={{ width: "32px", height: "32px" }}
                 height={32}
                 width={32}
@@ -85,6 +91,7 @@ function Connect() {
               <Image
                 src="/Mail.svg"
                 alt={"Github icon"}
+                className={theme === "dark" ? styles.svgsInvert : ""}
                 style={{ width: "32px", height: "32px" }}
                 height={32}
                 width={32}
@@ -107,6 +114,7 @@ function Connect() {
               <Image
                 src="/Resume.svg"
                 alt={"Document icon"}
+                className={theme === "dark" ? styles.svgsInvert : ""}
                 style={{ width: "32px", height: "32px" }}
                 height={32}
                 width={32}
