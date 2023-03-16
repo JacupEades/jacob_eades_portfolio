@@ -18,7 +18,6 @@ const Clear = styled(Button)({
   fontSize: 16,
   fontWeight: 700,
   color: "var(--primary-medium)",
-  backgroundColor: "var(--neutral-glass)",
   padding: "12px 24px",
   border: "2px solid",
   backdropFilter: "blur(2px)",

@@ -37,7 +37,7 @@ function Connect() {
           </h2>
           <div className="flex items-center gap-6 pb-6">
             <a
-              className="flex items-center justify-center rounded-full h-16 w-16  bg-buttonGlass bg-opacity-100 border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
+              className="flex items-center justify-center rounded-full h-16 w-16 bg-buttonGlass bg-opacity-100 backdrop-blur-sm border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
               href="https://github.com/JacupEades"
               target="_blank"
               rel="noreferrer"
@@ -60,7 +60,7 @@ function Connect() {
           </div>
           <div className="flex items-center gap-6 pb-6">
             <a
-              className="flex items-center justify-center rounded-full h-16 w-16  bg-buttonGlass bg-opacity-100 border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
+              className="flex items-center justify-center rounded-full h-16 w-16 bg-buttonGlass bg-opacity-100 backdrop-blur-sm border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
               href="https://www.linkedin.com/in/jacob-eades/"
               target="_blank"
               rel="noreferrer"
@@ -85,7 +85,7 @@ function Connect() {
           </div>
           <div className="flex items-center gap-6 pb-6">
             <a
-              className="flex items-center justify-center rounded-full h-16 w-16  bg-buttonGlass bg-opacity-100 border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
+              className="flex items-center justify-center rounded-full h-16 w-16 bg-buttonGlass bg-opacity-100 backdrop-blur-sm border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
               href="mailto:jwae98@gmail.com"
             >
               <Image
@@ -106,7 +106,7 @@ function Connect() {
           </div>
           <div className="flex items-center gap-6 pb-6">
             <a
-              className="flex items-center justify-center rounded-full h-16 w-16  bg-buttonGlass bg-opacity-100 border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
+              className="flex items-center justify-center rounded-full h-16 w-16 bg-buttonGlass bg-opacity-100 backdrop-blur-sm border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
               href="/Resume.pdf"
               target="_blank"
               rel="noreferrer"

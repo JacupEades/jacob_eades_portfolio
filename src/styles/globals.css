@@ -4,9 +4,13 @@
 @tailwind utilities;
 
 :root {
-  --primary-weak: #e6e0ff4d;
+  --primary-weak: linear-gradient(
+    111.68deg,
+    rgba(230, 224, 255, 0.15) 7.59%,
+    rgba(230, 224, 255, 0.3) 102.04%
+  );
   --primary-medium: #614ad3;
-  --primary-strong: #533acf;
+  --primary-strong: #614ad3;
   --neutral-white: #ffffff;
   --neutral-header: rgba(255, 255, 255, 0.9);
   --neutral-glass: rgba(255, 255, 255, 0.25);
@@ -31,42 +35,24 @@
     #cdd7fe 17.84%,
     #c5f9fc 113.46%
   );
-  --card-large-glass: linear-gradient(
-      101.54deg,
-      rgba(249, 248, 255, 0.3) -3.05%,
-      rgba(255, 255, 255, 0.1) 112.2%
-    ),
-    linear-gradient(
-      101.54deg,
-      rgba(249, 248, 255, 0.5) -3.05%,
-      rgba(255, 255, 255, 0.1) 112.2%
-    );
-  --card-mini-glass: linear-gradient(
-      101.54deg,
-      rgba(249, 248, 255, 0.3) -3.05%,
-      rgba(255, 255, 255, 0.1) 112.2%
-    ),
-    linear-gradient(
-      111.68deg,
-      rgba(230, 224, 255, 0.15) 7.59%,
-      rgba(230, 224, 255, 0.3) 102.04%
-    );
   --ball-1: linear-gradient(rgba(230, 202, 252, 0.9) 6.8%, #9ad1ef 95.44%);
   --ball-2: linear-gradient(#c0f7cf -5.84%, #92bdfd 107.88%);
   --ball-3: linear-gradient(#b6bdef -3.06%, #bae8f1 104.45%);
 }
 
 [data-theme="dark"] {
-  --primary-weak: #e6e0ff4d;
+  --primary-weak: linear-gradient(
+    111.68deg,
+    rgba(230, 224, 255, 0.15) 7.59%,
+    rgba(230, 224, 255, 0.3) 102.04%
+  );
   --primary-medium: #614ad3;
-  --primary-strong: #533acf;
+  --primary-strong: #614ad3;
   --neutral-white: #ffffff;
   --neutral-header: rgba(20, 17, 29, 0.8);
-  --neutral-glass: linear-gradient(
-    rgba(82, 68, 138, 0.15) 7.59%,
-    rgba(14, 0, 64, 0.25) 102.04%
-  );
-  --button-glass: rgba(82, 68, 138, 0.25);
+  --neutral-glass: linear-gradient(rgba(20, 14, 46, 0.15));
+
+  --button-glass: rgba(20, 14, 46, 0.25);
   --neutral-glass-hover: rgba(255, 255, 255, 0.5);
   --neutral-strong: #ffffff;
   --border-weak: #140e2e26;

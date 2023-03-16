@@ -15,7 +15,7 @@ export default function Hero({}: Props) {
   return (
     <section
       id="hero"
-      className="max-w-screen-xl h-[32.5rem] pt-[7.5rem] z-10 mb-4 mx-8"
+      className="max-w-7xl h-[32.5rem] pt-[7.5rem] z-10 mb-4 mx-8"
     >
       <div className={styles.heroBGA}>
         <div

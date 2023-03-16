@@ -8,10 +8,10 @@ export default function Skills({}: Props) {
   const theme = useTheme();
 
   return (
-    <section id="skills" className="max-w-screen-xl z-10 mb-4 mx-8 mt-36">
+    <section id="skills" className="max-w-7xl z-10 mb-4 mx-8 mt-36">
       <div className="flex flex-col-reverse laptop:grid laptop:grid-cols-2">
         <div className="laptop:w-[90%] desktop:w-full flex justify-center m-0">
-          <div className="overflow-hidden rounded-full bg-opacity-100 bg-primaryWeak">
+          <div className="rounded-full bg-opacity-100 bg-primaryWeak">
             <Image
               className="m-auto"
               src={
