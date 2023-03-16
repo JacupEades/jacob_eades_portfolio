@@ -51,11 +51,10 @@
   --neutral-white: #ffffff;
   --neutral-header: rgba(20, 17, 29, 0.8);
   --neutral-glass: linear-gradient(rgba(20, 14, 46, 0.15));
-
-  --button-glass: rgba(20, 14, 46, 0.25);
+  --button-glass: rgba(14, 0, 64, 0.15);
   --neutral-glass-hover: rgba(255, 255, 255, 0.5);
   --neutral-strong: #ffffff;
-  --border-weak: #140e2e26;
+  --border-weak: rgba(20, 14, 46, 0.15);
   --tags-primary: #6151a5;
   --tags-secondary: #1c788e;
   --gradient-logo: linear-gradient(256.12deg, #cdd7fe 17.84%, #c5f9fc 113.46%);
