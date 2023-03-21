@@ -106,14 +106,14 @@ export default function MajorProjects({}: Props) {
                 results.
               </p>
               {/* Tags div */}
-              <div className="pt-4 pb-16 flex flex-wrap gap-2">
+              <div className="pt-4 pb-20 flex flex-wrap gap-2">
                 <CardTag text="Website" color="var(--tags-primary)" />
                 <CardTag text="HTML" color="var(--tags-secondary)" />
                 <CardTag text="CSS" color="var(--tags-secondary)" />
                 <CardTag text="JavaScript" color="var(--tags-secondary)" />
               </div>
               {/* Buttons div */}
-              <div className="flex absolute bottom-6 gap-2 pt-6">
+              <div className="flex relative align-bottom gap-2">
                 <ButtonColor
                   text="Live"
                   link="https://eadeselectric.com/"
