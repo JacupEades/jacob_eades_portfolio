@@ -37,9 +37,9 @@ const ThemeUpdater: FC<{}> = () => {
           </Button>
         </div>
       ) : (
-        <div>
+        <div className="h-8 p-0">
           <Button
-            className="h-8 w-8"
+            className="px-0 py-1"
             style={{
               background:
                 "linear-gradient(to top right, #2a48f3 0%, #c32cc2 100%)",

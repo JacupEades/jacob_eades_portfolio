@@ -13,7 +13,7 @@
   --primary-strong: #614ad3;
   --neutral-white: #ffffff;
   --neutral-header: rgba(255, 255, 255, 0.9);
-  --neutral-glass: rgba(255, 255, 255, 0.25);
+  --neutral-glass: rgba(255, 255, 255, 0.15);
   --button-glass: rgba(255, 255, 255, 0.25);
   --neutral-glass-hover: rgba(255, 255, 255, 0.85);
   --neutral-strong: #393939;
@@ -50,7 +50,7 @@
   --primary-strong: #614ad3;
   --neutral-white: #ffffff;
   --neutral-header: rgba(20, 17, 29, 0.8);
-  --neutral-glass: linear-gradient(rgba(20, 14, 46, 0.15));
+  --neutral-glass: rgba(20, 14, 46, 0.15);
   --button-glass: rgba(14, 0, 64, 0.15);
   --neutral-glass-hover: rgba(255, 255, 255, 0.5);
   --neutral-strong: #ffffff;

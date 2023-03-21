@@ -5,11 +5,70 @@ import ButtonClear from "../buttons/ButtonClear";
 import ButtonColor from "../buttons/ButtonColor";
 import CardTag from "../CardTag";
 import { useMediaQuery } from "react-responsive";
+import Tooltip from "@mui/material/Tooltip";
 
 type Props = {};
 
 export default function MajorProjects({}: Props) {
   const smallButton = useMediaQuery({ query: "(min-width: 1260px)" });
+
+  const EADesktopButtons = () => {
+    return (
+      <>
+        <ButtonColor
+          text="View Live"
+          link="http://67.207.92.238/"
+          target="_blank"
+          tooltip={"Live currently disabled to cut server cost"}
+          isDisabled={true}
+        />
+        <ButtonClear
+          text="View Frontend"
+          icon="/Github.svg"
+          link="https://github.com/JacupEades/eades-ecom-frontend"
+          target="_blank"
+        />
+        <ButtonClear
+          text="View Backend"
+          icon="/Github.svg"
+          link="https://github.com/JacupEades/eades-ecom-backend"
+          target="_blank"
+        />
+      </>
+    );
+  };
+
+  const EASmallButtons = () => {
+    return (
+      <>
+        <ButtonColor
+          text="Live"
+          link="http://67.207.92.238/"
+          target="_blank"
+          tooltip={"Live currently disabled to cut server cost"}
+          isDisabled={true}
+        />
+        <ButtonClear
+          text="Frontend"
+          link="https://github.com/JacupEades/eades-ecom-frontend"
+          target="_blank"
+        />
+        <ButtonClear
+          text="Backend"
+          link="https://github.com/JacupEades/eades-ecom-backend"
+          target="_blank"
+        />
+      </>
+    );
+  };
+
+  const handleSmallScreens = () => {
+    if (smallButton) {
+      return EADesktopButtons();
+    } else {
+      return EASmallButtons();
+    }
+  };
 
   return (
     <section id="major" className="max-w-screen-xl z-10 pt-[5.5rem] mb-4 mx-8">
@@ -58,45 +117,7 @@ export default function MajorProjects({}: Props) {
               </div>
               {/* Buttons div */}
               <div className="flex absolute bottom-6 gap-2 pt-6">
-                {smallButton ? (
-                  <>
-                    <ButtonColor
-                      text="View Live"
-                      link="http://67.207.92.238/"
-                      target="_blank"
-                    />
-                    <ButtonClear
-                      text="View Frontend"
-                      icon="/Github.svg"
-                      link="https://github.com/JacupEades/eades-ecom-frontend"
-                      target="_blank"
-                    />
-                    <ButtonClear
-                      text="View Backend"
-                      icon="/Github.svg"
-                      link="https://github.com/JacupEades/eades-ecom-backend"
-                      target="_blank"
-                    />
-                  </>
-                ) : (
-                  <>
-                    <ButtonColor
-                      text="Live"
-                      link="http://67.207.92.238/"
-                      target="_blank"
-                    />
-                    <ButtonClear
-                      text="Frontend"
-                      link="https://github.com/JacupEades/eades-ecom-frontend"
-                      target="_blank"
-                    />
-                    <ButtonClear
-                      text="Backend"
-                      link="https://github.com/JacupEades/eades-ecom-backend"
-                      target="_blank"
-                    />
-                  </>
-                )}
+                <>{handleSmallScreens()}</>
               </div>
             </div>
           </div>
@@ -141,6 +162,7 @@ export default function MajorProjects({}: Props) {
                   text="View Live"
                   link="https://eadeselectric.com/"
                   target="_blank"
+                  tooltip={"Eades Electric LLC"}
                 />
                 <ButtonClear
                   text="View Github"

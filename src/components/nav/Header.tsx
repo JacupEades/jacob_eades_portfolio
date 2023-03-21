@@ -81,13 +81,13 @@ function Header({}: Props) {
     <>
       {/* this div is for the header background later */}
       <div id="header" className="fixed z-50 w-screen top-0">
-        <header className="flex justify-between max-w-auto max-w-7xl top-0 py-4 mx-auto h-[5.5rem]">
+        <header className="flex justify-between max-w-auto max-w-7xl top-0 py-1 tablet:py-4 mx-auto h-[2.75rem] tablet:h-[5.5rem]">
           {/* JE Logo */}
           <motion.div
             initial={{ x: -200, opacity: 0, scale: 0.5 }}
             animate={{ x: 0, opacity: 1, scale: 1 }}
             transition={{ duration: 0.75 }}
-            className="flex items-center px-8 desktop:p-0 font-pop h-14 w-14 font-bold text-4xl cursor-pointer bold"
+            className="flex items-center px-8 desktop:p-0 font-pop tablet:h-14 tablet:w-14 font-bold text-3xl tablet:text-4xl cursor-pointer bold"
           >
             <a href="#hero">JE</a>
           </motion.div>
