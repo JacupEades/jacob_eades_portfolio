@@ -10,113 +10,6 @@ import Tooltip from "@mui/material/Tooltip";
 type Props = {};
 
 export default function MajorProjects({}: Props) {
-  const smallButton = useMediaQuery({ query: "(min-width: 1260px)" });
-  const superSmallButton = useMediaQuery({ query: "(min-width: 420px)" });
-
-  const EADesktopButtons = () => {
-    return (
-      <>
-        {/* <ButtonColor
-          text="View Live"
-          link="http://67.207.92.238/"
-          target="_blank"
-          tooltip={"Live currently disabled to cut server cost"}
-          isDisabled={true}
-        /> */}
-        <ButtonClear
-          text="View Frontend"
-          icon="/Github.svg"
-          link="https://github.com/JacupEades/eades-ecom-frontend"
-          target="_blank"
-        />
-        <ButtonClear
-          text="View Backend"
-          icon="/Github.svg"
-          link="https://github.com/JacupEades/eades-ecom-backend"
-          target="_blank"
-        />
-      </>
-    );
-  };
-
-  const EASmallButtons = () => {
-    return (
-      <>
-        {/* <ButtonColor
-          text="Live"
-          link="http://67.207.92.238/"
-          target="_blank"
-          tooltip={"Live currently disabled to cut server cost"}
-          isDisabled={true}
-        /> */}
-        <ButtonClear
-          text="Frontend"
-          link="https://github.com/JacupEades/eades-ecom-frontend"
-          target="_blank"
-        />
-        <ButtonClear
-          text="Backend"
-          link="https://github.com/JacupEades/eades-ecom-backend"
-          target="_blank"
-        />
-      </>
-    );
-  };
-
-  const EEDesktopButtons = () => {
-    return (
-      <>
-        <ButtonColor
-          text="View Live"
-          link="https://eadeselectric.com/"
-          target="_blank"
-          tooltip={"Eades Electric LLC"}
-        />
-        <ButtonClear
-          text="View Github"
-          icon="/Github.svg"
-          link="https://github.com/JacupEades/eades_electric_llc_website"
-          target="_blank"
-        />
-      </>
-    );
-  };
-
-  const EESmallButtons = () => {
-    return (
-      <>
-        <ButtonColor
-          text="Live"
-          link="https://eadeselectric.com/"
-          target="_blank"
-          tooltip={"Eades Electric LLC"}
-        />
-        <ButtonClear
-          text="Github"
-          icon="/Github.svg"
-          link="https://github.com/JacupEades/eades_electric_llc_website"
-          target="_blank"
-        />
-      </>
-    );
-  };
-
-  const handleSmallScreensEA = () => {
-    if (smallButton) {
-      return EADesktopButtons();
-    } else {
-      return EASmallButtons();
-    }
-  };
-
-  const handleSmallScreensEE = () => {
-    if (superSmallButton) {
-      return EEDesktopButtons();
-    } else {
-      return EESmallButtons();
-    }
-  };
-
   return (
     <section id="major" className="max-w-screen-xl z-10 pt-[5.5rem] mb-4 mx-8">
       <p className="text-4xl font-bold pb-10">Major Projects</p>
@@ -164,7 +57,23 @@ export default function MajorProjects({}: Props) {
               </div>
               {/* Buttons div */}
               <div className="flex absolute bottom-6 gap-2 pt-6">
-                <>{handleSmallScreensEA()}</>
+                {/* <ButtonColor
+          text="Live"
+          link="http://67.207.92.238/"
+          target="_blank"
+          tooltip={"Live currently disabled to cut server cost"}
+          isDisabled={true}
+        /> */}
+                <ButtonClear
+                  text="Frontend"
+                  link="https://github.com/JacupEades/eades-ecom-frontend"
+                  target="_blank"
+                />
+                <ButtonClear
+                  text="Backend"
+                  link="https://github.com/JacupEades/eades-ecom-backend"
+                  target="_blank"
+                />
               </div>
             </div>
           </div>
@@ -205,7 +114,18 @@ export default function MajorProjects({}: Props) {
               </div>
               {/* Buttons div */}
               <div className="flex absolute bottom-6 gap-2 pt-6">
-                <>{handleSmallScreensEE()}</>
+                <ButtonColor
+                  text="Live"
+                  link="https://eadeselectric.com/"
+                  target="_blank"
+                  tooltip={"Eades Electric LLC"}
+                />
+                <ButtonClear
+                  text="Github"
+                  icon="/Github.svg"
+                  link="https://github.com/JacupEades/eades_electric_llc_website"
+                  target="_blank"
+                />
               </div>
             </div>
           </div>
