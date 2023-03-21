@@ -42,7 +42,7 @@ export default function MajorProjects({}: Props) {
                 the goal.
               </p>
               {/* Tags div */}
-              <div className="pt-4 flex flex-wrap gap-2 mb-16">
+              <div className="pt-4 flex flex-wrap gap-2 mb-[2.125rem]">
                 <CardTag text="Ecommerce" color="var(--tags-primary)" />
                 <CardTag text="JavaScript" color="var(--tags-secondary)" />
                 <CardTag text="React" color="var(--tags-secondary)" />
@@ -56,7 +56,7 @@ export default function MajorProjects({}: Props) {
                 <CardTag text="POSTMAN" color="var(--tags-secondary)" />
               </div>
               {/* Buttons div */}
-              <div className="flex absolute bottom-6 gap-2 pt-6">
+              <div className="flex relative gap-2">
                 {/* <ButtonColor
           text="Live"
           link="http://67.207.92.238/"
@@ -88,44 +88,48 @@ export default function MajorProjects({}: Props) {
               width={800}
               height={300}
             />
-            <div className="p-6">
-              <p className="text-2xl font-pop font-bold">Eades Electric</p>
-              <p className="pt-4">
-                This is the official website for my small buisness Eades
-                Electric LLC. I work closely with a user experience designer,
-                and we use Figma to design intuitive and user-friendly
-                interfaces for our projects.
-                <br />
-                Over the past year, I have had the pleasure of working with
-                several customers who have contacted me through my website.
-                Whether you are looking to build a new application from scratch
-                or need help with an existing project, I am here to help. My
-                expertise includes a wide range of programming languages and
-                platforms, and I am always learning and exploring new
-                technologies to ensure that my clients get the best possible
-                results.
-              </p>
-              {/* Tags div */}
-              <div className="pt-4 pb-20 flex flex-wrap gap-2">
-                <CardTag text="Website" color="var(--tags-primary)" />
-                <CardTag text="HTML" color="var(--tags-secondary)" />
-                <CardTag text="CSS" color="var(--tags-secondary)" />
-                <CardTag text="JavaScript" color="var(--tags-secondary)" />
+            <div className="p-6 grid gap-8 laptop:gap-28 desktop:gap-16">
+              <div>
+                <p className="text-2xl font-pop font-bold">Eades Electric</p>
+                <p className="pt-4">
+                  This is the official website for my small buisness Eades
+                  Electric LLC. I work closely with a user experience designer,
+                  and we use Figma to design intuitive and user-friendly
+                  interfaces for our projects.
+                  <br />
+                  Over the past year, I have had the pleasure of working with
+                  several customers who have contacted me through my website.
+                  Whether you are looking to build a new application from
+                  scratch or need help with an existing project, I am here to
+                  help. My expertise includes a wide range of programming
+                  languages and platforms, and I am always learning and
+                  exploring new technologies to ensure that my clients get the
+                  best possible results.
+                </p>
+                {/* Tags div */}
+                <div className="pt-4 flex flex-wrap gap-2">
+                  <CardTag text="Website" color="var(--tags-primary)" />
+                  <CardTag text="HTML" color="var(--tags-secondary)" />
+                  <CardTag text="CSS" color="var(--tags-secondary)" />
+                  <CardTag text="JavaScript" color="var(--tags-secondary)" />
+                </div>
               </div>
               {/* Buttons div */}
-              <div className="flex relative align-bottom gap-2">
-                <ButtonColor
-                  text="Live"
-                  link="https://eadeselectric.com/"
-                  target="_blank"
-                  tooltip={"Eades Electric LLC"}
-                />
-                <ButtonClear
-                  text="Github"
-                  icon="/Github.svg"
-                  link="https://github.com/JacupEades/eades_electric_llc_website"
-                  target="_blank"
-                />
+              <div>
+                <div className="flex relative gap-2">
+                  <ButtonColor
+                    text="Live"
+                    link="https://eadeselectric.com/"
+                    target="_blank"
+                    tooltip={"Eades Electric LLC"}
+                  />
+                  <ButtonClear
+                    text="Github"
+                    icon="/Github.svg"
+                    link="https://github.com/JacupEades/eades_electric_llc_website"
+                    target="_blank"
+                  />
+                </div>
               </div>
             </div>
           </div>
