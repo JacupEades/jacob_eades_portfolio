@@ -10,7 +10,7 @@ export default function Skills({}: Props) {
   return (
     <section
       id="skills"
-      className="max-w-7xl z-10 mb-4 mx-8 mt-10 desktop:mt-20"
+      className="max-w-7xl z-10 mb-4 mx-8 mt-10 laptop:mt-28 desktop:mt-36"
     >
       <div className="flex flex-col-reverse laptop:grid laptop:grid-cols-2">
         <div className="hidden tablet:flex laptop:w-[90%] desktop:w-full  justify-center m-0">
