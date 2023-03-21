@@ -9,7 +9,7 @@ type Props = {
   icon?: string;
   link: string;
   target?: string;
-  tooltip: string;
+  tooltip?: string;
   isDisabled?: boolean;
 };
 
