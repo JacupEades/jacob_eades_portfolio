@@ -143,7 +143,7 @@ function Connect() {
           <div className="flex items-center gap-6 pb-6">
             <a
               className="flex items-center justify-center rounded-full h-16 w-16 bg-buttonGlass bg-opacity-100 backdrop-blur-sm border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
-              href="/Resume.pdf"
+              href="https://docs.google.com/document/d/105L3vyZ2_CYkzorQU-AMyXvAaYzYKqQ4/edit?usp=sharing&ouid=106033786031580667626&rtpof=true&sd=true"
               target="_blank"
               rel="noreferrer"
             >
@@ -157,7 +157,7 @@ function Connect() {
               />
             </a>
             <a
-              href="/Resume.pdf"
+              href="https://docs.google.com/document/d/105L3vyZ2_CYkzorQU-AMyXvAaYzYKqQ4/edit?usp=sharing&ouid=106033786031580667626&rtpof=true&sd=true"
               className="font-bold transition ease-in-out duration-300 hover:text-primaryStrong hover:underline hover:scale-110"
               target="_blank"
               rel="noreferrer"
