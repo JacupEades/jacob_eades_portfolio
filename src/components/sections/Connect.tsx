@@ -26,6 +26,7 @@ function Connect() {
     //   if (!testing.name) return;
     //   formData2[testing.name] = testing.value;
     // });
+    // 
     fetch("/api/mail", {
       method: "post",
       body: JSON.stringify(formData),

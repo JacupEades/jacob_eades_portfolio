@@ -39,7 +39,7 @@
   --ball-2: linear-gradient(#c0f7cf -5.84%, #92bdfd 107.88%);
   --ball-3: linear-gradient(#b6bdef -3.06%, #bae8f1 104.45%);
 }
-
+/*  */
 [data-theme="dark"] {
   --primary-weak: linear-gradient(
     111.68deg,

@@ -76,3 +76,4 @@ export default function Hero({}: Props) {
 // function componentDidMount(arg0: HTMLElement | null) {
 //   throw new Error("Function not implemented.");
 // }
+//

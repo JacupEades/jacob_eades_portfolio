@@ -63,6 +63,7 @@ MyDocument.getInitialProps = async (ctx: DocumentContext) => {
   // 2. page.getInitialProps
   // 3. app.render
   // 4. page.render
+  //
 
   const originalRenderPage = ctx.renderPage;
 
