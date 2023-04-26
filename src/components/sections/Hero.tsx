@@ -34,28 +34,34 @@ export default function Hero({}: Props) {
             Software Engineer
           </p>
           <p className="pb-4">
-            I&#39;m a self-taught Full-Stack Developer with a unique background
-            as a <span className="font-bold">master electrician</span>. I had
-            some experience with Programmable Logic Controllers (PLC)
-            programming for industrial machines, which sparked my passion for
-            coding. My master electrician experience has helped me approach
-            complex problems systematically and with an eye for detail.{" "}
+            I&#39;m a self-taught{" "}
+            <span className="font-bold">Full-Stack Developer</span> with a
+            unique background as a{" "}
+            <span className="font-bold">Master Electrician</span>. I had some
+            experience with Programmable Logic Controllers (PLC) programming for
+            industrial machines, which sparked my passion for coding. My master
+            electrician experience has helped me approach complex problems
+            systematically and with an eye for detail.{" "}
           </p>
           <p className="pb-4">
-            I&#39;ve also collaborated closely with a{" "}
-            <span className="font-bold">User Experience and Interface</span>{" "}
-            designer on all of my projects, ensuring that my code meets both
-            functional and aesthetic requirements.
+            My software engineering education comes from building projects,
+            taking online courses, such as Udemy and Codecademy, and 1-on-1
+            mentorship from MentorCruise.
           </p>
           <p className="pb-8">
+            I&#39;ve also collaborated closely with a designer on all of my
+            projects, ensuring that my code meets both functional and aesthetic
+            requirements. <br />
             Currently, I&#39;m seeking a{" "}
-            <span className="font-bold">front-end</span> position to utilize my
-            skills and make a difference in the field. Explore my website to see
-            how I can bring value to your team.
+            <span className="font-bold">
+              front-end or full-stack web development
+            </span>{" "}
+            position to utilize my skills and make a difference in the field.
+            Explore my website to see how I can bring value to your team.
           </p>
           <div className="inline-grid grid-cols-2 gap-4">
-            <ButtonColor text="Hire Me" link={"#"} />
-            <ButtonClear text="View Projects" link={"#"} />
+            <ButtonColor text="Hire me" link={"#"} />
+            <ButtonClear text="View projects" link={"#"} />
           </div>
         </div>
         <div className="z-10 m-auto hidden laptop:block laptop:h-[398px] laptop:w-[398px] desktop:h-[476px] desktop:w-[476px]">

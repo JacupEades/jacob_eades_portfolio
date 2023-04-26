@@ -27,7 +27,7 @@ export default function Home() {
           <Hero />
           <Skills />
           <MajorProjects />
-          <MiniProjects />
+          {/* <MiniProjects /> */}
           <Connect />
         </div>
       </main>

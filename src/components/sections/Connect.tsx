@@ -122,7 +122,7 @@ function Connect() {
           <div className="flex items-center gap-6 pb-6">
             <a
               className="flex items-center justify-center rounded-full h-16 w-16 bg-buttonGlass bg-opacity-100 backdrop-blur-sm border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
-              href="mailto:jwae98@gmail.com"
+              href="mailto:jacob.wa.eades@gmail.com"
             >
               <Image
                 src="/Mail.svg"
@@ -134,10 +134,10 @@ function Connect() {
               />
             </a>
             <a
-              href="mailto:jwae98@gmail.com"
+              href="mailto:jacob.wa.eades@gmail.com"
               className="font-bold transition ease-in-out duration-300 hover:text-primaryStrong hover:underline hover:scale-110"
             >
-              jwae98@gmail.com
+              jacob.wa.eades@gmail.com
             </a>
           </div>
           <div className="flex items-center gap-6 pb-6">
@@ -148,7 +148,7 @@ function Connect() {
               rel="noreferrer"
             >
               <Image
-                src="/Resume.svg"
+                src="/Resume_Icon.svg"
                 alt={"Document icon"}
                 className={theme === "dark" ? styles.svgsInvert : ""}
                 style={{ width: "32px", height: "32px" }}
