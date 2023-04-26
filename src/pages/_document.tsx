@@ -13,18 +13,24 @@ export default class MyDocument extends Document {
     return (
       <Html id="htmlMain" lang="en">
         <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
+            rel="preconnect"
+            as="font"
+            href="https://fonts.googleapis.com"
+          />
+          <link rel="preconnect" as="font" href="https://fonts.gstatic.com" />
+          <link
+            as="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
-            rel="stylesheet"
           />
           <link
             rel="stylesheet"
+            as="font"
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
           />
+          {/* Remove rel="preload" from the following line */}
           <link
-            rel="preload"
+            as="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
           {/* Inject MUI styles first to match with the prepend: true configuration. */}

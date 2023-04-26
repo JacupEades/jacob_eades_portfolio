@@ -31,7 +31,7 @@ export default function Skills({}: Props) {
         </div>
         <div className="grid content-center ">
           <p className="text-4xl font-bold pb-4">Skills</p>
-          <p className="pb-4">
+          <div className="pb-4">
             Here are a few technologies I have experience with: <br />
             <ul className="list-disc ml-8">
               <li>
@@ -54,7 +54,7 @@ export default function Skills({}: Props) {
                 Other: <span className="font-bold">Next.js, Java, Python.</span>
               </li>
             </ul>{" "}
-          </p>
+          </div>
         </div>
       </div>
     </section>

@@ -33,12 +33,20 @@ function Connect() {
     toast.success("Email sent, Thank you for the message.");
   }
 
+  const clearBtn = () => {
+    let color = "var(--primary-medium)";
+    if (theme === "dark") {
+      return (color = "var(--neutral-white)");
+    }
+    return color;
+  };
+
   const Clear = styled(Button)({
     boxShadow: "none",
     textTransform: "none",
     fontSize: 16,
     fontWeight: 700,
-    color: "var(--neutral-strong)",
+    color: clearBtn(),
     padding: "12px 24px",
     border: "2px solid",
     backdropFilter: "blur(2px)",
@@ -81,7 +89,7 @@ function Connect() {
               <Image
                 src="/Github.svg"
                 alt={"Github icon"}
-                className={theme === "dark" ? styles.svgsInvert : ""}
+                className={styles.svgsInvert}
                 style={{ width: "32px", height: "32px" }}
                 height={32}
                 width={32}
@@ -104,7 +112,7 @@ function Connect() {
               <Image
                 src="/Linkedin.svg"
                 alt={"Linkedin icon"}
-                className={theme === "dark" ? styles.svgsInvert : ""}
+                className={styles.svgsInvert}
                 style={{ width: "32px", height: "32px" }}
                 height={32}
                 width={32}
@@ -127,7 +135,7 @@ function Connect() {
               <Image
                 src="/Mail.svg"
                 alt={"Github icon"}
-                className={theme === "dark" ? styles.svgsInvert : ""}
+                className={styles.svgsInvert}
                 style={{ width: "32px", height: "32px" }}
                 height={32}
                 width={32}
@@ -150,7 +158,7 @@ function Connect() {
               <Image
                 src="/Resume_Icon.svg"
                 alt={"Document icon"}
-                className={theme === "dark" ? styles.svgsInvert : ""}
+                className={styles.svgsInvert}
                 style={{ width: "32px", height: "32px" }}
                 height={32}
                 width={32}
@@ -197,9 +205,6 @@ function Connect() {
                 type="submit"
                 className="bg-opacity-100 gap-2 bg-buttonGlass w-min whitespace-nowrap"
                 variant="contained"
-                style={
-                  theme === "dark" ? { color: "#fff" } : { color: "#614AD3" }
-                }
               >
                 Submit Message
               </Clear>

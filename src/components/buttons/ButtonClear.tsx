@@ -72,7 +72,11 @@ function ButtonClear({ text, icon, link, target }: Props) {
           ) : (
             ""
           )}
-          <a href={link} target={target} style={{ color: "#fff" }}>
+          <a
+            href={link}
+            target={target}
+            style={theme === "dark" ? { color: "#fff" } : { color: "#614AD3" }}
+          >
             {text}
           </a>
         </Clear>
