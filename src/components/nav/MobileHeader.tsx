@@ -26,6 +26,7 @@ function MobileHeader({}: Props) {
   const theme = useTheme();
   // Header breakpoint dropdown logic from mui
   const [open, setOpen] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
   const anchorRef = useRef<HTMLButtonElement>(null);
 
   const handleToggle = () => {
@@ -62,17 +63,21 @@ function MobileHeader({}: Props) {
   }, [open]);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const scrolled = window.scrollY;
-      // console.log(scrolled)
-      let element: any = document.getElementById("header");
-      if (scrolled >= 60) {
-        element.classList.add("bg-neutralHeader");
-      } else {
-        element.classList.remove("bg-neutralHeader");
-      }
-    });
-  });
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      setIsAtTop(scrollTop === 0);
+    };
+    let element: any = document.getElementById("header");
+    if (!isAtTop) {
+      element.classList.add("bg-neutralHeader");
+    } else {
+      element.classList.remove("bg-neutralHeader");
+    }
+    console.log("event check");
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isAtTop]);
 
   return (
     <>
@@ -148,9 +153,9 @@ function MobileHeader({}: Props) {
                           <MenuItem onClick={handleClose}>
                             <a href="#major">Major Projects</a>
                           </MenuItem>
-                          <MenuItem onClick={handleClose}>
+                          {/* <MenuItem onClick={handleClose}>
                             <a href="#mini">Mini Projects</a>
-                          </MenuItem>
+                          </MenuItem> */}
                           <MenuItem onClick={handleClose}>
                             <a href="#connect">Contact</a>
                           </MenuItem>

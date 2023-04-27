@@ -102,3 +102,7 @@
     rgba(24, 115, 133, 0.8) 104.45%
   );
 }
+
+html {
+  scroll-behavior: smooth;
+}
