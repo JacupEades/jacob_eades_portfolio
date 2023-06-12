@@ -10,6 +10,7 @@ type Props = {
   icon?: string;
   link: string;
   target?: string;
+  isDisabled?: boolean;
 };
 
 const Clear = styled(Button)({
@@ -37,7 +38,7 @@ const Clear = styled(Button)({
   },
 });
 
-function ButtonClear({ text, icon, link, target }: Props) {
+function ButtonClear({ text, icon, link, target, isDisabled }: Props) {
   const { theme } = useTheme();
   if (theme == "light") {
     return (
@@ -45,6 +46,7 @@ function ButtonClear({ text, icon, link, target }: Props) {
         <Clear
           className="bg-opacity-100 gap-2 bg-buttonGlass"
           variant="contained"
+          disabled={isDisabled}
         >
           {icon ? <Image src={icon} alt="icon" width={24} height={24} /> : ""}
           <a href={link} target={target}>
@@ -59,6 +61,7 @@ function ButtonClear({ text, icon, link, target }: Props) {
         <Clear
           className="bg-opacity-100 gap-2 bg-buttonGlass"
           variant="contained"
+          disabled={isDisabled}
         >
           {icon ? (
             <Image

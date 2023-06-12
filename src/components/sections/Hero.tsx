@@ -4,13 +4,11 @@ import styles from "@/styles/Home.module.css";
 import ButtonClear from "../buttons/ButtonClear";
 import ButtonColor from "../buttons/ButtonColor";
 import { useTheme } from "@mui/material/styles";
-import { useMediaQuery } from "react-responsive";
 
 type Props = {};
 
 export default function Hero({}: Props) {
   const theme = useTheme();
-  const contentSmall = useMediaQuery({ query: "(min-width: 900px)" });
 
   return (
     <section

@@ -74,7 +74,7 @@ function Header({}: Props) {
     } else {
       element.classList.remove("bg-neutralHeader");
     }
-    console.log("event check");
+    // console.log("event check");
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);

@@ -72,65 +72,97 @@ export default function MajorProjects({}: Props) {
             </div>
           </div>
         </div>
-        {/* Eades Antiques */}
+        {/* Natural Nooks */}
         <div className={styles.cardLargeBorder}>
           <div className={styles.cardLarge}>
             <Image
-              src="/Shop_EA.png"
-              alt="Eades Antiques Screenshot"
+              src="/NaturalNooks_Home.png"
+              alt="Natural Nooks Home Page Screenshot"
               style={{ aspectRatio: 2 / 1 }}
               width={800}
               height={300}
             />
-            <div className="p-6">
-              <p className="text-2xl font-pop font-bold">Eades Antiques</p>
-              <p className="pt-4">
-                This is my first big project using the MERN Stack. Total time to
-                complete 68 hours over 3 months while wiring a three-story house
-                alone. This Project was built following the Udemy course created
-                by Ryan Dhungel.
-                <br />
-                The goal of the project for me is to learn as many aspects of
-                how front-end and back-end communicate, and to provide proof
-                that I am capable of learning and commiting to such a large
-                project. Eades Ecommerce has a LOT of styleing issues as of
-                2/10/2023, but creating a very flashy site was not the goal.
-                Creating a functional site that can collect user requests,
-                display database information, and potentially collect income was
-                the goal.
-              </p>
-              {/* Tags div */}
-              <div className="pt-4 flex flex-wrap gap-2 mb-[2.125rem]">
-                <CardTag text="Ecommerce" color="var(--tags-primary)" />
-                <CardTag text="JavaScript" color="var(--tags-secondary)" />
-                <CardTag text="React" color="var(--tags-secondary)" />
-                <CardTag text="Express.js" color="var(--tags-secondary)" />
-                <CardTag text="MongoDB" color="var(--tags-secondary)" />
-                <CardTag text="Node.js" color="var(--tags-secondary)" />
-                <CardTag text="Stripe" color="var(--tags-secondary)" />
-                <CardTag text="Firebase" color="var(--tags-secondary)" />
-                <CardTag text="DigitalOcean" color="var(--tags-secondary)" />
-                <CardTag text="Studio 3T" color="var(--tags-secondary)" />
-                <CardTag text="POSTMAN" color="var(--tags-secondary)" />
+            <div className="p-6 h-full flex flex-col justify-between">
+              <div>
+                <p className="text-2xl font-pop font-bold">Natural Nooks</p>
+                <p className="pt-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Veritatis consequatur ab neque fugit maiores reiciendis. Eius
+                  facilis odio pariatur illo laborum eos maxime! Quod temporibus
+                  suscipit omnis expedita fuga quae.
+                </p>
+                {/* Tags div */}
+                <div className="pt-4 flex flex-wrap gap-2 mb-[2.125rem]">
+                  <CardTag text="Ecommerce" color="var(--tags-primary)" />
+                  <CardTag text="JavaScript" color="var(--tags-secondary)" />
+                  <CardTag text="React" color="var(--tags-secondary)" />
+                  <CardTag text="Next.js" color="var(--tags-secondary)" />
+                  <CardTag text="Vercel" color="var(--tags-secondary)" />
+                </div>
               </div>
               {/* Buttons div */}
-              <div className="flex relative gap-2">
-                {/* <ButtonColor
-          text="Live"
-          link="http://67.207.92.238/"
-          target="_blank"
-          tooltip={"Live currently disabled to cut server cost"}
-          isDisabled={true}
-        /> */}
-                <ButtonClear
-                  text="Frontend"
-                  link="https://github.com/JacupEades/eades-ecom-frontend"
+              <div className="flex relative gap-2 ">
+                <ButtonColor
+                  text="Live"
+                  link="https://e-com-v2.vercel.app/"
                   target="_blank"
+                  isDisabled={false}
                 />
                 <ButtonClear
-                  text="Backend"
-                  link="https://github.com/JacupEades/eades-ecom-backend"
+                  text="Github"
+                  icon="/Github.svg"
+                  link="https://github.com/JacupEades/e-com-v2"
                   target="_blank"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Fridge Raider */}
+        <div className={styles.cardLargeBorder}>
+          <div className={styles.cardLarge}>
+            <Image
+              src="/Fridge_Raider_Tracker_Page.png"
+              alt="Fridge Raider Tracker Page Screenshot"
+              style={{ aspectRatio: 2 / 1 }}
+              width={800}
+              height={300}
+            />
+            <div className="p-6 h-full flex flex-col justify-between">
+              <div>
+                <p className="text-2xl font-pop font-bold">Fridge Raider</p>
+                <p className="pt-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Veritatis consequatur ab neque fugit maiores reiciendis. Eius
+                  facilis odio pariatur illo laborum eos maxime! Quod temporibus
+                  suscipit omnis expedita fuga quae.
+                </p>
+                {/* Tags div */}
+                <div className="pt-4 flex flex-wrap gap-2 mb-[2.125rem]">
+                  <CardTag text="Ecommerce" color="var(--tags-primary)" />
+                  <CardTag text="JavaScript" color="var(--tags-secondary)" />
+                  <CardTag text="React" color="var(--tags-secondary)" />
+                  <CardTag text="Next.js" color="var(--tags-secondary)" />
+                  <CardTag text="Vercel" color="var(--tags-secondary)" />
+                  <CardTag text="Superbase" color="var(--tags-secondary)" />
+                  <CardTag text="OpenAI" color="var(--tags-secondary)" />
+                  <CardTag text="IndexedDB" color="var(--tags-secondary)" />
+                </div>
+              </div>
+              {/* Buttons div */}
+              <div className="flex relative gap-2 ">
+                <ButtonColor
+                  text="Live"
+                  link="https://app.fridgeraider.org/"
+                  target="_blank"
+                  isDisabled={false}
+                />
+                <ButtonClear
+                  text="Private"
+                  icon="/Github.svg"
+                  link="https://github.com/JacupEades"
+                  target="_blank"
+                  isDisabled={true}
                 />
               </div>
             </div>
