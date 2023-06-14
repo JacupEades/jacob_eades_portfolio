@@ -4,10 +4,13 @@ import styles from "@/styles/Home.module.css";
 import ButtonClear from "../buttons/ButtonClear";
 import ButtonColor from "../buttons/ButtonColor";
 import CardTag from "../CardTag";
+import { useTheme } from "@mui/material/styles";
 
 type Props = {};
 
 export default function MajorProjects({}: Props) {
+  const theme = useTheme();
+
   return (
     <section id="major" className="max-w-screen-xl z-10 pt-[5.5rem] mb-4 mx-8">
       <p className="text-4xl font-bold pb-10">Major Projects</p>
@@ -16,7 +19,7 @@ export default function MajorProjects({}: Props) {
         <div className={styles.cardLargeBorder}>
           <div className={styles.cardLarge}>
             <Image
-              src="/pcw_screen_2.png"
+              src="/Prayer_Connect_Cover.png"
               alt="Prayer Connect Web Screenshot"
               style={{ aspectRatio: 2 / 1 }}
               width={800}
@@ -24,25 +27,21 @@ export default function MajorProjects({}: Props) {
             />
             <div className="p-6 grid gap-8 laptop:gap-28 desktop:gap-16">
               <div>
-                <p className="text-2xl font-pop font-bold">
-                  Prayer Connect Web
+                <p className="text-[1.25rem] font-pop font-bold">
+                  Prayer Connect Web App
                 </p>
                 <p className="pt-4">
-                  This is the web version of a mobile app intended for church
-                  communities. It is currently a work in progress, but feel free
-                  to look at the progress. The goal of this project is to allow
-                  Christians to share prayer requests so they can grow into
-                  their community. <br />
-                  This will be the first project I expect to be used by multiple
-                  people on a daily bases. Debugging will be very crucial
-                  aspect, so the users don&#39;t get frustrated. Through this
-                  project I hope to bring my community closer as one body and
-                  provide a quality real world project to include on my
-                  portfolio.
+                  Prayer-Connect is a social app designed to connect members of
+                  my local multi-ethnic community for the purpose of sharing
+                  prayers. Users can join various groups, post private or public
+                  prayers, track the number of prayers, and celebrate answered
+                  prayers. Currently, the app is available as a web-only
+                  platform with plans to develop a native mobile app in the
+                  future.
                 </p>
                 {/* Tags div */}
                 <div className="pt-4 flex flex-wrap gap-2">
-                  <CardTag text="Mobile" color="var(--tags-primary)" />
+                  <CardTag text="Social" color="var(--tags-primary)" />
                   <CardTag text="Next.js" color="var(--tags-secondary)" />
                   <CardTag text="React" color="var(--tags-secondary)" />
                   <CardTag text="CSS" color="var(--tags-secondary)" />
@@ -76,7 +75,7 @@ export default function MajorProjects({}: Props) {
         <div className={styles.cardLargeBorder}>
           <div className={styles.cardLarge}>
             <Image
-              src="/NaturalNooks_Home.png"
+              src="/NaturalNook_Cover.png"
               alt="Natural Nooks Home Page Screenshot"
               style={{ aspectRatio: 2 / 1 }}
               width={800}
@@ -84,12 +83,18 @@ export default function MajorProjects({}: Props) {
             />
             <div className="p-6 h-full flex flex-col justify-between">
               <div>
-                <p className="text-2xl font-pop font-bold">Natural Nooks</p>
+                <p className="text-[1.25rem] font-pop font-bold">
+                  NaturalNooks E-Commerce (Work-in-Progress)
+                </p>
                 <p className="pt-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Veritatis consequatur ab neque fugit maiores reiciendis. Eius
-                  facilis odio pariatur illo laborum eos maxime! Quod temporibus
-                  suscipit omnis expedita fuga quae.
+                  NaturalNooks is an e-commerce website dedicated to elevating
+                  the work-from-home experience with stylish and comfortable
+                  home office essentials. At present, the platform features a
+                  landing page, along with partially completed product list and
+                  cart pages, constructed using mock data. The remainder of the
+                  features, including product reviews, wishlist functionality,
+                  and the checkout process, are under active refactoring from a
+                  previous version.
                 </p>
                 {/* Tags div */}
                 <div className="pt-4 flex flex-wrap gap-2 mb-[2.125rem]">
@@ -98,6 +103,7 @@ export default function MajorProjects({}: Props) {
                   <CardTag text="React" color="var(--tags-secondary)" />
                   <CardTag text="Next.js" color="var(--tags-secondary)" />
                   <CardTag text="Vercel" color="var(--tags-secondary)" />
+                  <CardTag text="SCSS" color="var(--tags-secondary)" />
                 </div>
               </div>
               {/* Buttons div */}
@@ -122,7 +128,11 @@ export default function MajorProjects({}: Props) {
         <div className={styles.cardLargeBorder}>
           <div className={styles.cardLarge}>
             <Image
-              src="/Fridge_Raider_Tracker_Page.png"
+              src={
+                theme.palette.mode === "light"
+                  ? "/FridgeRaider_Cover.png"
+                  : "/FridgeRaider_Cover_Dark.png"
+              }
               alt="Fridge Raider Tracker Page Screenshot"
               style={{ aspectRatio: 2 / 1 }}
               width={800}
@@ -130,23 +140,34 @@ export default function MajorProjects({}: Props) {
             />
             <div className="p-6 h-full flex flex-col justify-between">
               <div>
-                <p className="text-2xl font-pop font-bold">Fridge Raider</p>
+                <p className="text-[1.25rem] font-pop font-bold">
+                  Fridge Raider (Work-in-Progress)
+                </p>
                 <p className="pt-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Veritatis consequatur ab neque fugit maiores reiciendis. Eius
-                  facilis odio pariatur illo laborum eos maxime! Quod temporibus
-                  suscipit omnis expedita fuga quae.
+                  Leveraging the power of AI with ChatGPT integration,
+                  FrigeRaider provides tailored recipes and generates grocery
+                  lists derived from user profile settings, kitchen equipment,
+                  and current home ingredients. The application&apos;s unique
+                  features include ingredient tracking and nutrient profiling,
+                  which aim to foster healthier eating habits. It also offers
+                  generalized pricing data to assist with budgeting. Still under
+                  development, Frige Raider promises to make meal planning
+                  simpler, personalized, and more nutrition-conscious.
                 </p>
                 {/* Tags div */}
                 <div className="pt-4 flex flex-wrap gap-2 mb-[2.125rem]">
-                  <CardTag text="Ecommerce" color="var(--tags-primary)" />
+                  <CardTag
+                    text="Health & Wellness"
+                    color="var(--tags-primary)"
+                  />
                   <CardTag text="JavaScript" color="var(--tags-secondary)" />
                   <CardTag text="React" color="var(--tags-secondary)" />
                   <CardTag text="Next.js" color="var(--tags-secondary)" />
                   <CardTag text="Vercel" color="var(--tags-secondary)" />
                   <CardTag text="Superbase" color="var(--tags-secondary)" />
-                  <CardTag text="OpenAI" color="var(--tags-secondary)" />
+                  <CardTag text="AI" color="var(--tags-secondary)" />
                   <CardTag text="IndexedDB" color="var(--tags-secondary)" />
+                  <CardTag text="SCSS" color="var(--tags-secondary)" />
                 </div>
               </div>
               {/* Buttons div */}
@@ -155,7 +176,7 @@ export default function MajorProjects({}: Props) {
                   text="Live"
                   link="https://app.fridgeraider.org/"
                   target="_blank"
-                  isDisabled={false}
+                  isDisabled={true}
                 />
                 <ButtonClear
                   text="Private"
@@ -172,32 +193,32 @@ export default function MajorProjects({}: Props) {
         <div className={styles.cardLargeBorder}>
           <div className={styles.cardLarge}>
             <Image
-              src="/EE_Screen.svg"
+              src={
+                theme.palette.mode === "light"
+                  ? "/EE_Screen.png"
+                  : "/EE_Screen_Dark.png"
+              }
               alt="Eades Electric Screenshot"
               style={{ aspectRatio: 2 / 1 }}
               width={800}
               height={300}
             />
-            <div className="p-6 grid gap-8 laptop:gap-28 desktop:gap-16">
+            <div className="p-6 h-full flex flex-col justify-between">
               <div>
-                <p className="text-2xl font-pop font-bold">Eades Electric</p>
+                <p className="text-[1.25rem] font-pop font-bold">
+                  Eades Electric
+                </p>
                 <p className="pt-4">
-                  This is the official website for my small buisness Eades
-                  Electric LLC. I work closely with a user experience designer,
-                  and we use Figma to design intuitive and user-friendly
-                  interfaces for our projects.
-                  <br />
-                  Over the past year, I have had the pleasure of working with
-                  several customers who have contacted me through my website.
-                  Whether you are looking to build a new application from
-                  scratch or need help with an existing project, I am here to
-                  help. My expertise includes a wide range of programming
-                  languages and platforms, and I am always learning and
-                  exploring new technologies to ensure that my clients get the
-                  best possible results.
+                  Eades Electric is the first website I’ve ever built on my own.
+                  The website provides essential information about my small
+                  electrician business. Despite its simplicity, Eades Electric
+                  demonstrates key web development principles, with an emphasis
+                  on responsiveness to ensure optimal user experience across
+                  different devices. The project laid the groundwork for my
+                  ongoing journey as a full-stack web developer.
                 </p>
                 {/* Tags div */}
-                <div className="pt-4 flex flex-wrap gap-2">
+                <div className="pt-4 flex flex-wrap gap-2 mb-[2.125rem]">
                   <CardTag text="Website" color="var(--tags-primary)" />
                   <CardTag text="HTML" color="var(--tags-secondary)" />
                   <CardTag text="CSS" color="var(--tags-secondary)" />

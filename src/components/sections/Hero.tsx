@@ -58,15 +58,15 @@ export default function Hero({}: Props) {
             Explore my website to see how I can bring value to your team.
           </p>
           <div className="inline-grid grid-cols-2 gap-4">
-            <ButtonColor text="Hire me" link={"#"} />
-            <ButtonClear text="View projects" link={"#"} />
+            <ButtonColor text="Hire me" link={"#connect"} />
+            <ButtonClear text="View projects" link={"#major"} />
           </div>
         </div>
         <div className="z-10 m-auto hidden laptop:block laptop:h-[398px] laptop:w-[398px] desktop:h-[476px] desktop:w-[476px]">
           <div className=" flex overflow-hidden rounded-full bg-opacity-100 bg-primaryWeak backdrop-blur h-full w-full">
             <Image
               className="m-auto"
-              src={"/Cutout_JacobEades.png"}
+              src={"/Protrate.svg"}
               alt={"Jacob Eades Cutout"}
               height={568}
               width={432}

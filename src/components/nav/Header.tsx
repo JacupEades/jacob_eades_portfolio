@@ -101,8 +101,8 @@ function Header({}: Props) {
             transition={{ duration: 1.25 }}
             className="hidden laptop:flex font-pop font-medium text-xl items-center px-8 space-x-12"
           >
-            <a href="#skills">About</a>
-            <a href="#major">Major Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#major">Projects</a>
             {/* <a href="#mini">Mini Projects</a> */}
             <a href="#connect">Contact</a>
             <ThemeUpdater />
@@ -162,7 +162,7 @@ function Header({}: Props) {
                           onKeyDown={handleListKeyDown}
                         >
                           <MenuItem onClick={handleClose}>
-                            <a href="#skills">About</a>
+                            <a href="#skills">Skills</a>
                           </MenuItem>
                           <MenuItem onClick={handleClose}>
                             <a href="#major">Major Projects</a>

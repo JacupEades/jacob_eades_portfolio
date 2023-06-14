@@ -42,12 +42,11 @@ function ButtonColor({ text, icon, link, target, tooltip, isDisabled }: Props) {
       <ColorButton
         className="bg-opacity-100 bg-primaryMedium hover:bg-sky-700"
         variant="contained"
+        href={link}
         disabled={isDisabled ? true : false}
       >
         {icon ? <Image src={icon} alt="icon" width={24} height={24} /> : ""}
-        <a href={link} target={target}>
-          {text}
-        </a>
+        {text}
       </ColorButton>
     </Tooltip>
   );

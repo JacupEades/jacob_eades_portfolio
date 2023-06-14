@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import Image from "next/image";
 import { Button } from "@mui/material";
-import { useTheme } from "next-themes";
+import { useTheme } from "@mui/material/styles";
 import styles from "@/styles/Home.module.css";
 
 type Props = {
@@ -39,53 +39,45 @@ const Clear = styled(Button)({
 });
 
 function ButtonClear({ text, icon, link, target, isDisabled }: Props) {
-  const { theme } = useTheme();
-  if (theme == "light") {
-    return (
-      <>
-        <Clear
-          className="bg-opacity-100 gap-2 bg-buttonGlass"
-          variant="contained"
-          disabled={isDisabled}
+  const [themeCheck, setThemeCheck] = useState("light");
+  const theme = useTheme();
+
+  useEffect(() => {
+    if (theme) {
+      setThemeCheck(theme.palette.mode);
+    }
+  }, [theme]);
+
+  return (
+    <>
+      <Clear
+        className="bg-opacity-100 gap-2 bg-buttonGlass"
+        variant="contained"
+        disabled={isDisabled}
+        href={link}
+      >
+        {icon ? (
+          <Image
+            src={icon}
+            alt="icon"
+            className={styles.svgsInvert}
+            style={{ width: "auto", height: "auto", filter: "100%" }}
+            width={24}
+            height={24}
+          />
+        ) : (
+          ""
+        )}
+        <span
+          style={
+            themeCheck === "dark" ? { color: "#fff" } : { color: "#614AD3" }
+          }
         >
-          {icon ? <Image src={icon} alt="icon" width={24} height={24} /> : ""}
-          <a href={link} target={target}>
-            {text}
-          </a>
-        </Clear>
-      </>
-    );
-  } else {
-    return (
-      <>
-        <Clear
-          className="bg-opacity-100 gap-2 bg-buttonGlass"
-          variant="contained"
-          disabled={isDisabled}
-        >
-          {icon ? (
-            <Image
-              src={icon}
-              alt="icon"
-              className={styles.svgsInvert}
-              style={{ width: "auto", height: "auto", filter: "100%" }}
-              width={24}
-              height={24}
-            />
-          ) : (
-            ""
-          )}
-          <a
-            href={link}
-            target={target}
-            style={theme === "dark" ? { color: "#fff" } : { color: "#614AD3" }}
-          >
-            {text}
-          </a>
-        </Clear>
-      </>
-    );
-  }
+          {text}
+        </span>
+      </Clear>
+    </>
+  );
 }
 
 export default ButtonClear;

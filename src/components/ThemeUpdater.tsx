@@ -33,7 +33,7 @@ const ThemeUpdater: FC<{}> = () => {
               setTheme(resolvedTheme === "light" ? "dark" : "light")
             }
           >
-            Toggle {resolvedTheme === "light" ? "dark" : "light"} mode
+            {resolvedTheme === "light" ? "dark" : "light"} mode
           </Button>
         </div>
       ) : (

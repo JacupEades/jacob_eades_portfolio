@@ -1,32 +1,50 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { useTheme } from "@mui/material/styles";
 
 type Props = {};
 
 export default function Skills({}: Props) {
+  const [skillImg, setSkillImg] = useState("Skills");
   const theme = useTheme();
+
+  useEffect(() => {
+    switch (theme.palette.mode) {
+      case "light":
+        setSkillImg("Skills");
+        break;
+      case "dark":
+        setSkillImg("Skills_Dark");
+        break;
+      default:
+        setSkillImg("Skills");
+    }
+  }, [theme]);
+
+  const SkillBubble = () => {
+    const imageSource = `/${skillImg}.svg`;
+    return (
+      <div className="m-auto h-96 w-96">
+        <Image
+          src={imageSource}
+          alt="Skill icons grouped"
+          priority
+          width={432}
+          height={432}
+        />
+      </div>
+    );
+  };
 
   return (
     <section
       id="skills"
-      className="max-w-7xl z-10 mb-4 mx-8 mt-10 laptop:mt-10 desktop:mt-36"
+      className="bg-[url('/BG_Slant.png')] max-w-7xl z-10 mb-4 mx-8  pt-[5.5rem]"
     >
       <div className="flex flex-col-reverse laptop:grid laptop:grid-cols-2">
         <div className="hidden tablet:flex laptop:w-[90%] desktop:w-full  justify-center m-0">
           <div className="rounded-full bg-opacity-100 bg-primaryWeak">
-            <Image
-              className="m-auto h-96 w-96"
-              src={
-                theme.palette.mode === "light"
-                  ? "/Skills.svg"
-                  : "/Skills_Dark.svg"
-              }
-              alt="Skill icons grouped"
-              priority
-              width={432}
-              height={432}
-            />
+            <SkillBubble />
           </div>
         </div>
         <div className="grid content-center ">
@@ -47,7 +65,8 @@ export default function Skills({}: Props) {
                 Back-end:{" "}
                 <span className="font-bold">
                   Express.js, Node.js, MongoDB, Firebase, Axios, Mongoose,
-                  DigitalOcean, Studio 3T, POSTMAN, Cloudinary.
+                  DigitalOcean, Studio 3T, POSTMAN, Cloudinary, Superbase,
+                  IndexedDB, Vercel, Stripe, RESTful APIs.
                 </span>{" "}
               </li>
               <li>
