@@ -39,7 +39,7 @@ export default function Skills({}: Props) {
   return (
     <section
       id="skills"
-      className="bg-[url('/BG_Slant.png')] max-w-7xl z-10 mb-4 mx-8  pt-[5.5rem]"
+      className="bg-[url('/BG_Slant.png')] max-w-7xl z-10 mb-4 mx-8  pt-[5.5rem] pointer-events-none"
     >
       <div className="flex flex-col-reverse laptop:grid laptop:grid-cols-2">
         <div className="hidden tablet:flex laptop:w-[90%] desktop:w-full  justify-center m-0">

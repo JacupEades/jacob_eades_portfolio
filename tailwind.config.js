@@ -33,6 +33,8 @@ module.exports = {
       darkHeroBG: "var(--gradient-hero-bg-dark)",
     },
     screens: {
+      phone: "400px",
+
       tablet: "600px",
 
       laptop: "900px",

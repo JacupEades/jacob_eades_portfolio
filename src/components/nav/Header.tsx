@@ -65,7 +65,7 @@ function Header({}: Props) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
+      const scrollTop = window.scrollY;
       setIsAtTop(scrollTop === 0);
     };
     let element: any = document.getElementById("header");

@@ -23,17 +23,11 @@ export default function Home() {
           <div className={styles.circleBehind}></div>
           <div className={styles.circleBehind}></div>
           <div className={styles.circleBehind}></div>
-          {/* Good */}
           <Header />
-          {/* likely the hydro warning */}
           <Hero />
-          {/* Good */}
           <Skills />
-          {/* less likely the hydro warning */}
           <MajorProjects />
-          {/* src svg Warning */}
           {/* <MiniProjects /> */}
-          {/* clear button classname warning: try making a none mui btn */}
           <Connect />
         </div>
       </main>

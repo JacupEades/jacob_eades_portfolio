@@ -79,7 +79,7 @@ function Connect() {
             Get in touch with me by submitting the form or using any of the
             links.
           </p>
-          <div className="flex items-center gap-6 pb-6">
+          <div className="flex flex-col phone:flex-row items-start phone:items-center gap-3 phone:gap-6 pb-6">
             <a
               className="flex items-center justify-center rounded-full h-16 w-16 bg-buttonGlass bg-opacity-100 backdrop-blur-sm border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
               href="https://github.com/JacupEades"
@@ -97,12 +97,12 @@ function Connect() {
             </a>
             <a
               href="https://github.com/JacupEades"
-              className="w-1/3 tablet:w-0  font-bold transition ease-in-out duration-300 hover:text-primaryStrong hover:underline hover:scale-110"
+              className="break-words phone:max-w-[14rem] tablet:max-w-none  font-bold transition ease-in-out duration-300 hover:text-primaryStrong hover:underline hover:scale-110"
             >
               https://github.com/JacupEades
             </a>
           </div>
-          <div className="flex items-center gap-6 pb-6">
+          <div className="flex flex-col phone:flex-row items-start phone:items-center gap-3 phone:gap-6 pb-6">
             <a
               className="flex items-center justify-center rounded-full h-16 w-16 bg-buttonGlass bg-opacity-100 backdrop-blur-sm border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
               href="https://www.linkedin.com/in/jacob-eades/"
@@ -122,12 +122,12 @@ function Connect() {
               href="https://www.linkedin.com/in/jacob-eades/"
               target="_blank"
               rel="noreferrer"
-              className="w-1/4 tablet:w-3/4 font-bold transition ease-in-out duration-300 hover:text-primaryStrong hover:underline hover:scale-110"
+              className="break-words max-w-[18rem] phone:max-w-[14rem] tablet:max-w-none  font-bold transition ease-in-out duration-300 hover:text-primaryStrong hover:underline hover:scale-110"
             >
               https://www.linkedin.com/in/jacob-eades/
             </a>
           </div>
-          <div className="flex items-center gap-6 pb-6">
+          <div className="flex flex-col phone:flex-row items-start phone:items-center gap-3 phone:gap-6 pb-6">
             <a
               className="flex items-center justify-center rounded-full h-16 w-16 bg-buttonGlass bg-opacity-100 backdrop-blur-sm border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
               href="mailto:jacob.wa.eades@gmail.com"
@@ -148,7 +148,7 @@ function Connect() {
               jacob.wa.eades@gmail.com
             </a>
           </div>
-          <div className="flex items-center gap-6 pb-6">
+          <div className="flex flex-col phone:flex-row items-start phone:items-center gap-3 phone:gap-6 pb-6">
             <a
               className="flex items-center justify-center rounded-full h-16 w-16 bg-buttonGlass bg-opacity-100 backdrop-blur-sm border-[0.1875rem] border-borderWeak transition ease-in-out duration-300 hover:bg-neutralGlassHover hover:scale-110"
               href="https://docs.google.com/document/d/1jDA1zLP9TPZKPt4l5DHYtdZK4KN-X2LC/edit?usp=sharing&ouid=108739544739131071990&rtpof=true&sd=true"
